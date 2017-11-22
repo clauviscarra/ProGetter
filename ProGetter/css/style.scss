@@ -10,7 +10,7 @@ $deep-gray: #3F3e3F;
 body {
   margin: 0;
   font-family: $font;
-  overflow: auto;
+  overflow: visible;
 }
 
 .container {
@@ -308,4 +308,20 @@ body {
   height: 200px;
   width: 200px;
   margin:auto;
+}
+
+
+//FOOTER Styling
+.footer{
+  background-color: $dark-green;
+  margin: auto;
+  text-align: center;
+  color: white;
+  padding: 30px;
+  a{
+    font-size: 15pt;
+    text-decoration: none;
+    color:white;
+  }
+
 }
