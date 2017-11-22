@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,900');
+$font: 'Raleway', sans-serif;
+$dark-orange: #E56D13;
+$light-orange: #EE964B;
+$dark-green: #19647E;
+$torquoise: #28AFB0;
+$light-green: #5AAA95;
+$deep-gray: #3F3e3F;
+
+body {
+  margin: 0;
+  font-family: $font;
+  overflow: auto;
+}
+
+.container {
+  max-width: 1920px;
+  margin: 0;
+}
+//BUTTONS
+.orange-edge {
+  background-color: $light-orange;
+  color: white;
+  font-weight: 900;
+  font-size: 15pt;
+  border: none;
+  padding: 10px 30px;
+}
+
+.orange-edge:hover {
+  background-color: $dark-orange;
+}
+
+.green-round{
+  @extend .orange-edge;
+  background-color: $light-green;
+  border-radius: 50px;
+}
+
+.green-round:hover{
+  background-color: $dark-green;
+}
+
+//TITLES
+.orange-title{
+  display: inline-block;
+  background-color: white;
+  color: $light-orange;
+  margin: 30px;
+  padding: 10px 20px;
+}
+// NAVBAR Styling
+
+.navbar {
+  margin: 0;
+  padding: 20px 10px;
+  font-family: $font;
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  background: -webkit-linear-gradient(bottom, rgba(25,100,126,0), rgba(255,100,126,1));
+  /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(top, rgba(25,100,126,0), rgba(25,100,126,1));
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(top, rgba(25,100,126,0), rgba(25,100,126,1));
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to top, rgba(25,100,126,0), rgba(25,100,126,1));
+  /* Standard syntax (must be last) */
+  display: grid;
+  grid-template-columns: 50% 2fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: "headerleft headerright search";
+
+  a {
+    display: inline;
+    float: right;
+    vertical-align: middle;
+    line-height: 20px;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+  }
+
+  a:hover {
+    font-weight: 900;
+  }
+
+  a.active {
+    color: $torquoise;
+  }
+}
+
+.form {
+  width: 170px;
+  height: 25px;
+  padding: 5px 10px;
+  color: white;
+  border: 1px solid white;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0);
+
+  input {
+    color: white;
+    vertical-align: middle;
+    border: none;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0);
+  }
+
+  button {
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    vertical-align: middle;
+
+    img {
+      width: 20px;
+      display: inline;
+      vertical-align: middle;
+    }
+  }
+}
+
+.logo {
+  grid-area: headerleft;
+}
+
+.navbar-right {
+  grid-area: headerright;
+}
+
+.form {
+  grid-area: search;
+}
+//MAIN Area Styling
+.main {
+  margin: 0;
+  background-image: url("../images/girl-garden.jpeg");
+  height: 100%;
+  background-attachment: fixed;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+  background-size: cover;
+  padding: 200px 10px;
+  width: 100%;
+  text-align: center;
+  font-family: $font;
+  color: white;
+
+  h1 {
+    font-size: 60pt;
+    line-height: 60px;
+    text-shadow: 5px 7px 40px #000000;
+  }
+
+  p {
+    font-size: 20pt;
+    line-height: 20px;
+    text-shadow: 3px 4px 20px #000000;
+  }
+}
+#user_greeting {
+  -webkit-animation-duration: .7s;
+  -webkit-animation-delay: .2s;
+
+  -moz-animation-duration: .7s;
+  -moz-animation-delay: .2s;
+
+  -o-animation-duration: .7s;
+  -o-animation-delay: .2s;
+
+}
+//DASHBOARD Styling
+.dashboard {
+  margin: 0;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas: "featured favorites projects groups appointments" "featuredprojects featuredprojects featuredprojects featuredprojects schedule";
+
+  button {
+    @extend .orange-edge;
+    font-size: 15pt;
+    font-weight: 400;
+    padding: 20px 30px;
+    border-left: 2px solid white;
+
+  }
+}
+
+.featured-tab {
+  grid-area: featured;
+}
+
+.favorites-tab {
+  grid-area: favorites;
+}
+
+.projects-tab {
+  grid-area: projects;
+}
+
+.groups-tab {
+  grid-area: groups;
+}
+
+.appointments-tab {
+  grid-area: appointments;
+}
+
+.schedule-tab {
+  border-left: 2px solid white;
+  background-color: $light-green;
+  text-align: center;
+  color: white;
+  padding: 10px 20px;
+
+  h1 {
+    font-size: 15pt;
+  }
+  grid-area: schedule;
+}
+
+//FEATURED PROJECTS
+
+.featured-projects {
+  width: 90%;
+  padding: 40px 60px 0px 60px;
+  grid-area: featuredprojects;
+  grid-column-end: span 4;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+}
+
+.project {
+  width: 100%;
+  border: 3px solid $light-green;
+  margin: auto;
+  overflow: scroll;
+
+  .fave-icon {
+    background-color: Transparent;
+    border: none;
+    padding: 0;
+  }
+
+  .fave-icon:hover {
+    background-color: Transparent;
+  }
+
+  .project-head {
+    margin: auto;
+    padding: 20px 15px;
+    color: white;
+    font-size: 15pt;
+    text-shadow: 3px 4px 20px #000000;
+    background-size: cover;
+  }
+
+  .project-body {
+    margin: auto;
+    padding: 20px 15px;
+    color: $deep-gray;
+
+
+  }
+}
+
+.center{
+  text-align: center;
+  color:$dark-green;
+  font-size: 15pt;
+  font-weight: 900;
+}
+
+.featured-mentors{
+  margin: auto;
+  width: 100%;
+  background-image: url('../images/stripes-bg-01.png');
+  background-size: cover;
+  text-align: center;
+}
+.three-columns{
+  margin: auto;
+  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-gap: 30px;
+}
+
+.mentor{
+  @extend .project;
+  background-color: white;
+  grid-gap: 30px;
+}
