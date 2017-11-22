@@ -68,6 +68,7 @@ body {
 
 .form {
   width: 170px;
+  overflow: hidden;
   height: 25px;
   padding: 5px 10px;
   color: white;
@@ -78,8 +79,9 @@ body {
     color: white;
     vertical-align: middle;
     border: none;
+    width: 75%;
     padding: 0;
-    background-color: rgba(0, 0, 0, 0); }
+    background-color: Transparent; }
   .form button {
     background-color: rgba(0, 0, 0, 0);
     border: none;
@@ -130,17 +132,17 @@ body {
   -o-animation-delay: .2s; }
 
 .dashboard {
-  margin: 0;
+  margin: 0 auto;
   width: 100%;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: auto;
+  grid-gap: 1px;
   grid-template-areas: "featured favorites projects groups appointments" "featuredprojects featuredprojects featuredprojects featuredprojects schedule"; }
   .dashboard button {
     font-size: 15pt;
     font-weight: 400;
-    padding: 20px 30px;
-    border-left: 2px solid white; }
+    padding: 20px 30px; }
 
 .featured-tab {
   grid-area: featured; }
@@ -158,7 +160,6 @@ body {
   grid-area: appointments; }
 
 .schedule-tab {
-  border-left: 2px solid white;
   background-color: #5AAA95;
   text-align: center;
   color: white;
@@ -243,5 +244,7 @@ body {
     font-size: 15pt;
     text-decoration: none;
     color: white; }
+  .footer a:hover {
+    color: #28AFB0; }
 
 /*# sourceMappingURL=style.css.map */

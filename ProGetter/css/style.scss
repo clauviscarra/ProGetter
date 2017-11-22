@@ -93,6 +93,7 @@ body {
 
 .form {
   width: 170px;
+  overflow: hidden;
   height: 25px;
   padding: 5px 10px;
   color: white;
@@ -104,8 +105,9 @@ body {
     color: white;
     vertical-align: middle;
     border: none;
+    width: 75%;
     padding: 0;
-    background-color: rgba(0, 0, 0, 0);
+    background-color: Transparent;
   }
 
   button {
@@ -173,11 +175,12 @@ body {
 }
 //DASHBOARD Styling
 .dashboard {
-  margin: 0;
+  margin: 0 auto;
   width: 100%;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: auto;
+  grid-gap: 1px;
   grid-template-areas: "featured favorites projects groups appointments" "featuredprojects featuredprojects featuredprojects featuredprojects schedule";
 
   button {
@@ -185,7 +188,6 @@ body {
     font-size: 15pt;
     font-weight: 400;
     padding: 20px 30px;
-    border-left: 2px solid white;
 
   }
 }
@@ -211,7 +213,6 @@ body {
 }
 
 .schedule-tab {
-  border-left: 2px solid white;
   background-color: $light-green;
   text-align: center;
   color: white;
@@ -322,6 +323,9 @@ body {
     font-size: 15pt;
     text-decoration: none;
     color:white;
+  }
+  a:hover{
+    color: $torquoise;
   }
 
 }
