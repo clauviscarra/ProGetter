@@ -7,11 +7,15 @@ $torquoise: #28AFB0;
 $light-green: #5AAA95;
 $deep-gray: #3F3e3F;
 
+
+*{
+    overflow-x:hidden;
+}
 body {
   margin: 0;
+  width:100%;
   font-family: $font;
-  overflow-y: scroll;
-  overflow-x: hidden;
+
 }
 
 
@@ -272,7 +276,6 @@ li{
    background-position: center;
    background-repeat: no-repeat;
    background-size: cover;
-  background-size: cover;
   padding: 200px 10px;
   width: 100%;
   text-align: center;
