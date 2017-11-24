@@ -359,6 +359,15 @@ body {
     grid-gap: 20px;
     overflow: hidden; }
 
+  .favorite-projects {
+    display: none; }
+
+  .my-projects {
+    display: none; }
+
+  .my-groups {
+    display: none; }
+
   .featured-mentors {
     margin: auto;
     padding: 0;
