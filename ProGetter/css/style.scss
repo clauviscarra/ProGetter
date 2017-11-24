@@ -15,10 +15,6 @@ body {
 }
 
 
-.active{
-  background-color: $dark-orange;
-}
-
 
 .container {
   max-width: 1920px;
@@ -295,17 +291,7 @@ li{
     text-shadow: 3px 4px 20px #000000;
   }
 }
-#user_greeting {
-  -webkit-animation-duration: .7s;
-  -webkit-animation-delay: .2s;
 
-  -moz-animation-duration: .7s;
-  -moz-animation-delay: .2s;
-
-  -o-animation-duration: .7s;
-  -o-animation-delay: .2s;
-
-}
 //DASHBOARD Styling
 
 .dashboard {

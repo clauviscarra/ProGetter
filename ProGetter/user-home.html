@@ -4,11 +4,12 @@
 <head>
   <meta charset="utf-8">
   <title>ProGetter</title>
-
- <link rel="stylesheet" href="bower_components/aos/dist/aos.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="./dist/aos.css" />
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
 
 <script>
 $(document).ready(function(){
@@ -17,27 +18,33 @@ $(document).ready(function(){
  });
 
  $('.favorites-tab').click(function(){
-   $(".favorite-projects").slideToggle()
+   $(".favorite-projects").slideToggle();
+   $('.favorites-tab').css("background-color","#E56D13");
+   $('.featured-tab').css("background-color","#EE964B");
+   $('.projects-tab').css("background-color","#EE964B");
+   $('.groups-tab').css("background-color","#EE964B");
+
 
  });
 
  $('.projects-tab').click(function(){
-   $(".my-projects").slideToggle()
+   $(".my-projects").slideToggle();
+   $('.projects-tab').css("background-color","#E56D13");
+   $('.featured-tab').css("background-color","#EE964B");
+   $('.favorites-tab').css("background-color","#EE964B");
+   $('.groups-tab').css("background-color","#EE964B");
  });
 
  $('.groups-tab').click(function(){
-   $(".my-groups").slideToggle()
+   $(".my-groups").slideToggle();
+   $('.groups-tab').css("background-color","#E56D13");
+   $('.featured-tab').css("background-color","#EE964B");
+   $('.favorites-tab').css("background-color","#EE964B");
+   $('.projects-tab').css("background-color","#EE964B");
  });
 
 
- $(window).scroll(function(){
-   if($(this).scrollTop()>40){
-     $('.logo').addClass('.big-logo');
 
-   } else{
-     $('.logo').removeClass('.big-logo')
-   }
- });
 });
 
 </script>
@@ -92,10 +99,10 @@ $(document).ready(function(){
     <!-- MAIN -->
     <div class="main">
       <!-- Populate user name using session -->
-      <h1 id="user_greeting" class="animated fadeInDown">Hello, Cheryl!</h1>
-      <p>Pick up where you left off.</p>
+      <h1  data-aos="fade-up">Hello, Cheryl!</h1>
+      <p data-aos="fade-up">Pick up where you left off.</p>
 
-      <button class="orange-edge" type="button" name="button"> <a href="#" style="color:white;text-decoration:none;">Jump to project</a></button>
+      <button data-aos="fade-up" class="orange-edge" type="button" name="button"> <a href="#" style="color:white;text-decoration:none;">Jump to project</a></button>
 
     </div>
 
@@ -139,7 +146,7 @@ $(document).ready(function(){
       <!-- FEATURED PROJECTS -->
       <div class="featured-projects">
         <!-- Insert code that will populate projects including title, description, grade, career and time. Here, each is coded manually, but ideally we would have a forloop that would populate each project -->
-        <div class="project" class="animated fadeInDown">
+        <div class="project"  data-aos="fade-up">
           <div class="project-head" style="background-image: url('images/math_kids.jpeg')">
             <!--Populate background that matches appropriate project type -->
 
@@ -164,7 +171,7 @@ $(document).ready(function(){
 
         </div>
 
-        <div class="project">
+        <div class="project" data-aos="fade-up">
           <div class="project-head" style="background-image: url('images/girl-writing.jpg')">
             <!--Populate background that matches appropriate project type -->
 
@@ -189,7 +196,7 @@ $(document).ready(function(){
 
 
         </div>
-        <div class="project">
+        <div class="project" data-aos="fade-up">
           <div class="project-head" style="background-image: url('images/kids-design.jpg')">
             <!--Populate background that matches appropriate project type -->
 
@@ -214,7 +221,7 @@ $(document).ready(function(){
 
 
         </div>
-        <div class="project">
+        <div class="project" data-aos="fade-up">
           <div class="project-head" style="background-image: url('images/boy-money.jpg')">
             <!--Populate background that matches appropriate project type -->
 
@@ -239,7 +246,7 @@ $(document).ready(function(){
 
 
         </div>
-        <div class="project">
+        <div class="project" data-aos="fade-up">
           <div class="project-head" style="background-image: url('images/kids-windpower.jpg')">
             <!--Populate background that matches appropriate project type -->
 
@@ -264,7 +271,7 @@ $(document).ready(function(){
 
 
         </div>
-        <div class="project">
+        <div class="project" data-aos="fade-up">
           <div class="project-head" style="background-image: url('images/girl-thinking.jpg')">
             <!--Populate background that matches appropriate project type -->
 
@@ -334,7 +341,7 @@ $(document).ready(function(){
 
       <div class="three-columns">
 
-        <div class="mentor">
+        <div data-aos="fade-up" class="mentor"data-aos="fade-up">
           <div class="mentor-picture" style="background-image: url('images/mentor_image-01.png')">
           </div>
           <br>
@@ -344,7 +351,7 @@ $(document).ready(function(){
           <p>Lorem ipsum dolor sit ament, consecteur adipiscing elit, sed.</p>
         </div>
 
-        <div class="mentor">
+        <div class="mentor" data-aos="fade-up">
           <div class="mentor-picture" style="background-image: url('images/mentor_image-01.png')">
           </div>
           <br>
@@ -354,7 +361,7 @@ $(document).ready(function(){
           <p>Lorem ipsum dolor sit ament, consecteur adipiscing elit, sed.</p>
         </div>
 
-        <div class="mentor">
+        <div class="mentor" data-aos="fade-up">
           <div class="mentor-picture" style="background-image: url('images/mentor_image-01.png')">
           </div>
           <br>
@@ -392,7 +399,21 @@ $(document).ready(function(){
 
 
 
+  <script src="./dist/aos.js"></script>
+  <script>
+    AOS.init({
+      easing: 'ease-in-out-sine'
+    });
+
+
+  </script>
+
+
+
 
 </body>
+
+
+
 
 </html>

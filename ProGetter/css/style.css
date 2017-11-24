@@ -5,9 +5,6 @@ body {
   overflow-y: scroll;
   overflow-x: hidden; }
 
-.active {
-  background-color: #E56D13; }
-
 .container {
   max-width: 1920px;
   margin: 0; }
@@ -201,14 +198,6 @@ body {
     font-size: 20pt;
     line-height: 20px;
     text-shadow: 3px 4px 20px #000000; }
-
-#user_greeting {
-  -webkit-animation-duration: .7s;
-  -webkit-animation-delay: .2s;
-  -moz-animation-duration: .7s;
-  -moz-animation-delay: .2s;
-  -o-animation-duration: .7s;
-  -o-animation-delay: .2s; }
 
 .dashboard {
   margin: 0 auto;
