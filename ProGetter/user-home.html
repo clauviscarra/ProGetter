@@ -4,6 +4,8 @@
 <head>
   <meta charset="utf-8">
   <title>ProGetter</title>
+
+ <link rel="stylesheet" href="bower_components/aos/dist/aos.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -15,16 +17,26 @@ $(document).ready(function(){
  });
 
  $('.favorites-tab').click(function(){
-   $(".favorite-projects").slideToggle().addClass("background");
+   $(".favorite-projects").slideToggle()
 
  });
 
  $('.projects-tab').click(function(){
-   $(".my-projects").slideToggle().addClass("background");
+   $(".my-projects").slideToggle()
  });
 
  $('.groups-tab').click(function(){
-   $(".my-groups").slideToggle().addClass("background");
+   $(".my-groups").slideToggle()
+ });
+
+
+ $(window).scroll(function(){
+   if($(this).scrollTop()>40){
+     $('.logo').addClass('.big-logo');
+
+   } else{
+     $('.logo').removeClass('.big-logo')
+   }
  });
 });
 
@@ -39,7 +51,7 @@ $(document).ready(function(){
     <div class="navbar">
 
       <div class="logo">
-        <img src="images/logo_1.png" alt="ProGetter-Logo" style="width:150px;">
+        <img src="images/logo_1.png" alt="ProGetter-Logo" >
 
       </div>
       <div class="navbar-right">
@@ -303,6 +315,8 @@ $(document).ready(function(){
 
 
     <div class="center">
+      <br>
+      <br>
       <br>
       <p class="animated fadeInRight">Do you have an idea for a project?</p>
       <button type="button" class="green-round" name="button">Submit project idea</button>

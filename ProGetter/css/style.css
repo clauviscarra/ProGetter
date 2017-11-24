@@ -8,11 +8,6 @@ body {
 .active {
   background-color: #E56D13; }
 
-.background {
-  background-color: white;
-  height: 100%;
-  width: 90%; }
-
 .container {
   max-width: 1920px;
   margin: 0; }
@@ -105,6 +100,9 @@ body {
 
 .logo {
   grid-area: headerleft; }
+
+.big-logo img {
+  width: 500px; }
 
 .navbar-right {
   grid-area: headerright; }
@@ -257,16 +255,20 @@ body {
   grid-column-end: span 4;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 30px; }
+  grid-gap: 30px;
+  height: 100%; }
 
 .favorite-projects {
-  display: none; }
+  display: none;
+  background-color: white; }
 
 .my-projects {
-  display: none; }
+  display: none;
+  background-color: white; }
 
 .my-groups {
-  display: none; }
+  display: none;
+  background-color: white; }
 
 .project, .mentor {
   width: 100%;
@@ -345,6 +347,9 @@ body {
     grid-template-columns: 100%;
     grid-template-areas: "featured" "favorites" "projects" "groups" "featuredprojects" "appointments" "schedule"; }
 
+  .appointments-tab {
+    margin-top: 50px; }
+
   .featured-projects, .favorite-projects, .my-projects, .my-groups {
     margin: auto 0;
     padding: 5%;
@@ -362,7 +367,6 @@ body {
   .three-columns {
     margin: auto 0;
     padding: 5%;
-    grid-area: featuredprojects;
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 20px;
