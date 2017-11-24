@@ -6,6 +6,29 @@
   <title>ProGetter</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script>
+$(document).ready(function(){
+  $('.fave-icon').click(function(){
+    $(this).toggleClass("fave-icon-active");
+ });
+
+ $('.favorites-tab').click(function(){
+   $(".favorite-projects").slideToggle().addClass("background");
+
+ });
+
+ $('.projects-tab').click(function(){
+   $(".my-projects").slideToggle().addClass("background");
+ });
+
+ $('.groups-tab').click(function(){
+   $(".my-groups").slideToggle().addClass("background");
+ });
+});
+
+</script>
 </head>
 
 <body>
@@ -20,9 +43,28 @@
 
       </div>
       <div class="navbar-right">
-        <a href="#">ABOUT</a>
-        <a href="#" style="display:none;">JOIN</a>
-        <a href="#">BECOME A MENTOR</a>
+        <div class="desktop-menu">
+          <a href="#">ABOUT</a>
+          <a href="#" style="display:none;">JOIN</a>
+          <a href="#">BECOME A MENTOR</a>
+
+        </div>
+
+        <!-- TOGGLE/MOBILE NAVBAR -->
+        <div id="menuToggle">
+          <input type="checkbox">
+
+          <span></span>
+          <span></span>
+          <span></span>
+
+          <ul id="mobileMenu">
+            <a href="#"> <li>About</li> </a>
+            <a href="#"> <li>Become a Mentor</li> </a>
+
+          </ul>
+
+        </div>
       </div>
 
 
@@ -33,13 +75,15 @@
 
     </div>
 
+
+
     <!-- MAIN -->
     <div class="main">
       <!-- Populate user name using session -->
       <h1 id="user_greeting" class="animated fadeInDown">Hello, Cheryl!</h1>
       <p>Pick up where you left off.</p>
 
-      <button class="orange-edge" type="button" name="button"> Jump to project</button>
+      <button class="orange-edge" type="button" name="button"> <a href="#" style="color:white;text-decoration:none;">Jump to project</a></button>
 
     </div>
 
@@ -87,7 +131,7 @@
           <div class="project-head" style="background-image: url('images/math_kids.jpeg')">
             <!--Populate background that matches appropriate project type -->
 
-            <button type="button" name="button" class="fave-icon"> <img src="images/gray_fave.png" alt="favorite"> </button>
+            <button type="button" name="button" class="fave-icon"> </button>
             <hr style="height:50px; border:none;">
             <p> MATH <br> Skill level: Intermediate </p>
           </div>
@@ -112,7 +156,7 @@
           <div class="project-head" style="background-image: url('images/girl-writing.jpg')">
             <!--Populate background that matches appropriate project type -->
 
-            <button type="button" name="button" class="fave-icon"> <img src="images/gray_fave.png" alt="favorite"> </button>
+            <button type="button" name="button" class="fave-icon">  </button>
             <hr style="height:50px; border:none;">
             <p> WRITING <br> Skill level: Intermediate </p>
           </div>
@@ -137,7 +181,7 @@
           <div class="project-head" style="background-image: url('images/kids-design.jpg')">
             <!--Populate background that matches appropriate project type -->
 
-            <button type="button" name="button" class="fave-icon"> <img src="images/gray_fave.png" alt="favorite"> </button>
+            <button type="button" name="button" class="fave-icon">  </button>
             <hr style="height:50px; border:none;">
             <p> DESIGN <br> Skill level: Intermediate </p>
           </div>
@@ -162,7 +206,7 @@
           <div class="project-head" style="background-image: url('images/boy-money.jpg')">
             <!--Populate background that matches appropriate project type -->
 
-            <button type="button" name="button" class="fave-icon"> <img src="images/gray_fave.png" alt="favorite"> </button>
+            <button type="button" name="button" class="fave-icon">  </button>
             <hr style="height:50px; border:none;">
             <p> BUSINESS <br> Skill level: Intermediate </p>
           </div>
@@ -187,7 +231,7 @@
           <div class="project-head" style="background-image: url('images/kids-windpower.jpg')">
             <!--Populate background that matches appropriate project type -->
 
-            <button type="button" name="button" class="fave-icon"> <img src="images/gray_fave.png" alt="favorite"> </button>
+            <button type="button" name="button" class="fave-icon">  </button>
             <hr style="height:50px; border:none;">
             <p> RESEARCH <br> Skill level: Intermediate </p>
           </div>
@@ -212,7 +256,7 @@
           <div class="project-head" style="background-image: url('images/girl-thinking.jpg')">
             <!--Populate background that matches appropriate project type -->
 
-            <button type="button" name="button" class="fave-icon"> <img src="images/gray_fave.png" alt="favorite"> </button>
+            <button type="button" name="button" class="fave-icon">  </button>
             <hr style="height:50px; border:none;">
             <p> READING <br> Skill level: Intermediate </p>
           </div>
@@ -233,6 +277,24 @@
 
         </div>
 
+
+      </div>
+
+      <!-- FAVORITE PROJECTS -->
+      <div class="favorite-projects">
+        <p>Insert code for favorite projects</p>
+
+      </div>
+
+      <!-- MY PROJECTS -->
+      <div class="my-projects">
+        <p>Insert code for "my projects"</p>
+
+      </div>
+
+      <!-- MY GROUPS -->
+      <div class="my-groups">
+        <p>Insert code for "my groups" </p>
 
       </div>
 
