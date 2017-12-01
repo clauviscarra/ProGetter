@@ -8,7 +8,12 @@ $light-green: #5AAA95;
 $deep-gray: #3F3e3F;
 
 
-
+*{
+  a{
+    text-decoration: none;
+    color: inherit;
+  }
+}
 body {
   margin: 0;
   width:100%;
