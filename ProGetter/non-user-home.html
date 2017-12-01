@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>ProGetter</title>
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="./dist/aos.css" />
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+
+<script>
+$(document).ready(function(){
+  $('.fave-icon').click(function(){
+    $(this).toggleClass("fave-icon-active");
+ });
+
+
+
+});
+
+</script>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- NAVBAR -->
+    <div class="navbar">
+
+      <div class="logo">
+        <img src="images/logo_1.png" alt="ProGetter-Logo" >
+
+      </div>
+      <div class="navbar-right">
+        <div class="desktop-menu">
+          <a href="#">ABOUT</a>
+          <a href="#" style="display:none;">JOIN</a>
+          <a href="#">BECOME A MENTOR</a>
+
+        </div>
+
+        <!-- TOGGLE/MOBILE NAVBAR -->
+        <div id="menuToggle">
+          <input type="checkbox">
+
+          <span></span>
+          <span></span>
+          <span></span>
+
+          <ul id="mobileMenu">
+            <a href="#"> <li>About</li> </a>
+            <a href="#"> <li>Become a Mentor</li> </a>
+
+          </ul>
+
+        </div>
+      </div>
+
+
+      <div class="form">
+        <input type="search" placeholder="Search">
+        <button type="submit"> <img src="images/search_icon.png" alt=""> </button>
+      </div>
+
+    </div>
+
+
+
+    <!-- MAIN -->
+    <div class="main" style="background-image:url('images/girls-science.jpg')">
+
+      <h1  data-aos="fade-up" style="font-size: 50pt">Projects designed by field experts</h1>
+      <p data-aos="fade-up">Start your future. Find your passion.</p>
+
+      <button data-aos="fade-up" class="orange-edge" type="button" name="button"> <a href="#" style="color:white;text-decoration:none;">Jump to project</a></button>
+
+    </div>
+
+<!-- PROJECTS -->
+
+<div class="non-user-projects">
+
+<div class="orange-title"> <h1>Featured projects</h1>
+
+</div>
+
+<div class="three-columns">
+
+
+        <div class="project" data-aos="fade-up">
+          <div class="project-head" style="background-image: url('images/girl-writing.jpg')">
+            <!--Populate background that matches appropriate project type -->
+
+            <button type="button" name="button" class="fave-icon">  </button>
+            <hr style="height:50px; border:none;">
+            <p> WRITING <br> Skill level: Intermediate </p>
+          </div>
+          <div class="project-body">
+
+            <strong>PROJECT NAME</strong> <br>
+            <p>Lorem ipsum dolor sit amet, consecuteur adipiscint elit, sed </p>
+
+            <img src="images/grade_icon.png" alt="grade" style="margin-right:20%;">
+            <img src="images/career_icon.png" alt="grade">
+            <img src="images/time_icon.png" alt="grade" style="margin-left:20%;">
+            <br>
+            <span style="margin-right:10%;color:#28AFB0;text-align:center;font-size:9pt;">Grade 6</span>
+            <span style="color:#28AFB0;text-align:center;font-size:9pt;">Financial Analyst</span>
+            <span style="margin-left:10%;color:#28AFB0;text-align:center;font-size:9pt;">2 weeks</span>
+
+          </div>
+
+
+        </div>
+
+        <div class="project" data-aos="fade-up">
+          <div class="project-head" style="background-image: url('images/kids-design.jpg')">
+            <!--Populate background that matches appropriate project type -->
+
+            <button type="button" name="button" class="fave-icon">  </button>
+            <hr style="height:50px; border:none;">
+            <p> DESIGN <br> Skill level: Intermediate </p>
+          </div>
+          <div class="project-body">
+
+            <strong>PROJECT NAME</strong> <br>
+            <p>Lorem ipsum dolor sit amet, consecuteur adipiscint elit, sed </p>
+
+            <img src="images/grade_icon.png" alt="grade" style="margin-right:20%;">
+            <img src="images/career_icon.png" alt="grade">
+            <img src="images/time_icon.png" alt="grade" style="margin-left:20%;">
+            <br>
+            <span style="margin-right:10%;color:#28AFB0;text-align:center;font-size:9pt;">Grade 6</span>
+            <span style="color:#28AFB0;text-align:center;font-size:9pt;">Financial Analyst</span>
+            <span style="margin-left:10%;color:#28AFB0;text-align:center;font-size:9pt;">2 weeks</span>
+
+          </div>
+
+
+        </div>
+        <div class="project" data-aos="fade-up">
+          <div class="project-head" style="background-image: url('images/boy-money.jpg')">
+            <!--Populate background that matches appropriate project type -->
+
+            <button type="button" name="button" class="fave-icon">  </button>
+            <hr style="height:50px; border:none;">
+            <p> BUSINESS <br> Skill level: Intermediate </p>
+          </div>
+          <div class="project-body">
+
+            <strong>PROJECT NAME</strong> <br>
+            <p>Lorem ipsum dolor sit amet, consecuteur adipiscint elit, sed </p>
+
+            <img src="images/grade_icon.png" alt="grade" style="margin-right:20%;">
+            <img src="images/career_icon.png" alt="grade">
+            <img src="images/time_icon.png" alt="grade" style="margin-left:20%;">
+            <br>
+            <span style="margin-right:10%;color:#28AFB0;text-align:center;font-size:9pt;">Grade 6</span>
+            <span style="color:#28AFB0;text-align:center;font-size:9pt;">Financial Analyst</span>
+            <span style="margin-left:10%;color:#28AFB0;text-align:center;font-size:9pt;">2 weeks</span>
+
+          </div>
+
+
+        </div>
+        <div class="project" data-aos="fade-up">
+          <div class="project-head" style="background-image: url('images/kids-windpower.jpg')">
+            <!--Populate background that matches appropriate project type -->
+
+            <button type="button" name="button" class="fave-icon">  </button>
+            <hr style="height:50px; border:none;">
+            <p> RESEARCH <br> Skill level: Intermediate </p>
+          </div>
+          <div class="project-body">
+
+            <strong>PROJECT NAME</strong> <br>
+            <p>Lorem ipsum dolor sit amet, consecuteur adipiscint elit, sed </p>
+
+            <img src="images/grade_icon.png" alt="grade" style="margin-right:20%;">
+            <img src="images/career_icon.png" alt="grade">
+            <img src="images/time_icon.png" alt="grade" style="margin-left:20%;">
+            <br>
+            <span style="margin-right:10%;color:#28AFB0;text-align:center;font-size:9pt;">Grade 6</span>
+            <span style="color:#28AFB0;text-align:center;font-size:9pt;">Financial Analyst</span>
+            <span style="margin-left:10%;color:#28AFB0;text-align:center;font-size:9pt;">2 weeks</span>
+
+          </div>
+
+
+        </div>
+        <div class="project" data-aos="fade-up">
+          <div class="project-head" style="background-image: url('images/girl-thinking.jpg')">
+            <!--Populate background that matches appropriate project type -->
+
+            <button type="button" name="button" class="fave-icon">  </button>
+            <hr style="height:50px; border:none;">
+            <p> READING <br> Skill level: Intermediate </p>
+          </div>
+          <div class="project-body">
+
+            <strong>PROJECT NAME</strong> <br>
+            <p>Lorem ipsum dolor sit amet, consecuteur adipiscint elit, sed </p>
+
+            <img src="images/grade_icon.png" alt="grade" style="margin-right:20%;">
+            <img src="images/career_icon.png" alt="grade">
+            <img src="images/time_icon.png" alt="grade" style="margin-left:20%;">
+            <br>
+            <span style="margin-right:10%;color:#28AFB0;text-align:center;font-size:9pt;">Grade 6</span>
+            <span style="color:#28AFB0;text-align:center;font-size:9pt;">Financial Analyst</span>
+            <span style="margin-left:10%;color:#28AFB0;text-align:center;font-size:9pt;">2 weeks</span>
+
+          </div>
+        </div>
+
+</div>
+
+</div>
+
+
+    <div class="center">
+      <br>
+      <br>
+      <br>
+      <p class="animated fadeInRight">Do you have an idea for a project?</p>
+      <button type="button" class="green-round" name="button">Submit project idea</button>
+      <br>
+      <br>
+    </div>
+
+    <br>
+
+    <!-- FEATURED MENTORS -->
+    <div class="featured-mentors">
+      <!-- Insert code that will populate mentor image, name, title and description  -->
+
+      <h1 class="orange-title">Featured Mentors</h1>
+
+      <div class="three-columns">
+
+        <div data-aos="fade-up" class="mentor"data-aos="fade-up">
+          <div class="mentor-picture" style="background-image: url('images/mentor_image-01.png')">
+          </div>
+          <br>
+
+          <strong>MENTOR NAME </strong><br>
+          <p>Job Title </p>
+          <p>Lorem ipsum dolor sit ament, consecteur adipiscing elit, sed.</p>
+        </div>
+
+        <div class="mentor" data-aos="fade-up">
+          <div class="mentor-picture" style="background-image: url('images/mentor_image-01.png')">
+          </div>
+          <br>
+
+          <strong>MENTOR NAME </strong><br>
+          <p>Job Title </p>
+          <p>Lorem ipsum dolor sit ament, consecteur adipiscing elit, sed.</p>
+        </div>
+
+        <div class="mentor" data-aos="fade-up">
+          <div class="mentor-picture" style="background-image: url('images/mentor_image-01.png')">
+          </div>
+          <br>
+
+          <strong>MENTOR NAME </strong><br>
+          <p>Job Title </p>
+          <p>Lorem ipsum dolor sit ament, consecteur adipiscing elit, sed.</p>
+        </div>
+
+      </div>
+
+      <br>
+      <br>
+      <br>
+
+      <button class="green-round" type="button" name="button">Become a mentor</button>
+
+      <br>
+      <br>
+      <br>
+
+    </div>
+
+    <!-- FOOTER -->
+
+    <div class="footer">
+      <img src="images/logo_2.png" alt="logo2">
+      <br>
+      <br>
+      <a href="#">About | </a> <a href="#">Team | </a> <a href="#">Press | </a> <a href="#">FAQs | </a> <a href="#">Contact | </a> <a href="#">Terms </a>
+
+    </div>
+
+  </div>
+
+
+
+  <script src="./dist/aos.js"></script>
+  <script>
+    AOS.init({
+      easing: 'ease-in-out-sine'
+    });
+
+
+  </script>
+
+
+
+
+</body>
+
+
+
+
+</html>

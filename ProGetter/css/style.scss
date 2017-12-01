@@ -8,9 +8,7 @@ $light-green: #5AAA95;
 $deep-gray: #3F3e3F;
 
 
-*{
-    overflow-x:hidden;
-}
+
 body {
   margin: 0;
   width:100%;
@@ -284,7 +282,7 @@ li{
 
   h1 {
     font-size: 60pt;
-    line-height: 60px;
+    line-height: 70px;
     text-shadow: 5px 7px 40px #000000;
   }
 
@@ -369,6 +367,13 @@ li{
 
 }
 
+.non-user-projects{
+  margin: auto;
+  width: 100%;
+  background-size: cover;
+  text-align: center;
+}
+
 .my-projects{
   @extend .featured-projects;
   display: none;
@@ -390,6 +395,7 @@ li{
   margin: auto;
   overflow: scroll;
   color: $deep-gray;
+  text-align: left;
 
 
   .fave-icon {
@@ -460,6 +466,7 @@ li{
   display: grid;
   grid-template-columns: repeat(3,1fr);
   grid-gap: 100px;
+
 }
 
 .mentor{
@@ -535,6 +542,10 @@ li{
   }
 
 }
+
+
+
+
 
 
 //FOOTER Styling
