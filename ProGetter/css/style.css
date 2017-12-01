@@ -33,7 +33,8 @@ body {
   background-color: white;
   color: #EE964B;
   margin: 30px;
-  padding: 10px 20px; }
+  padding: 10px 20px;
+  text-align: center; }
 
 .navbar {
   z-index: 3;
