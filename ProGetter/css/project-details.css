@@ -180,27 +180,23 @@ body {
 
   .desktop-menu {
     display: none; } }
-.main {
+.project-details {
   margin: 0;
-  background-image: url("../images/girl-garden.jpeg");
   height: 100%;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding: 200px 10px;
+  padding: 100px 10px;
   width: 100%;
-  text-align: center;
   font-family: "Raleway", sans-serif;
-  color: white; }
-  .main h1 {
-    font-size: 60pt;
-    line-height: 70px;
-    text-shadow: 5px 7px 40px #000000; }
-  .main p {
-    font-size: 20pt;
-    line-height: 20px;
-    text-shadow: 3px 4px 20px #000000; }
+  display: grid; }
+  .project-details .project-info {
+    padding: 10px 20px; }
+    .project-details .project-info h1 {
+      font-size: 30pt;
+      color: #19647E; }
+    .project-details .project-info h3 {
+      color: #28AFB0; }
+    .project-details .project-info p {
+      font-size: 20pt;
+      color: #19647E; }
 
 .dashboard {
   margin: 0 auto;
@@ -392,4 +388,4 @@ body {
   .footer a:hover {
     color: #28AFB0; }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=project-details.css.map */
