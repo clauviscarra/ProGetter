@@ -14,11 +14,16 @@ $deep-gray: #3F3e3F;
   }
 }
 
-body {
-  margin: 0;
-  width: 100%;
-  font-family: $font;
+html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    font-family: $font;
+    overflow-x: hidden;
 }
+
 
 .container {
   max-width: 1920px;
@@ -50,6 +55,22 @@ body {
 .green-round:hover {
   background-color: $dark-green;
 }
+
+.fa {
+  padding: 10px 15px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  border: $light-orange 2px solid;
+  margin: 2px;
+  color: $light-orange;
+}
+.fa:hover {
+    color: white;
+    background: $dark-orange;
+}
+
 //TITLES
 .orange-title {
   display: inline-block;
@@ -235,7 +256,9 @@ body {
   #menuToggle {
     display: block;
   }
-
+  .navbar{
+    height: auto;
+  }
   .form {
     display: none;
   }
@@ -252,7 +275,7 @@ body {
   width: 100%;
   font-family: $font;
   display: grid;
-  grid-template-columns: 75% 25%;
+  grid-template-columns: 72% 28%;
   grid-template-areas: "project-info mentor-info";
 
   .project-info {
@@ -276,22 +299,42 @@ body {
 
   .featured-mentors {
     margin: 0 auto;
+    padding: 100px 50px;
     width: 100%;
     background-image: url('../images/stripes-bg-01.png');
     background-size: cover;
     text-align: center;
     grid-area: mentor-info;
+
+    .mentor {
+
+      margin: auto 0;
+      @extend .project;
+      background-color: white;
+      padding: 40px 20px;
+    }
+
+    .mentor-picture {
+      background-size: cover;
+      border: 3px solid $light-green;
+      border-radius: 100%;
+      height: 200px;
+      width: 200px;
+      margin: auto;
+    }
   }
+
 }
 //DASHBOARD Styling
 .dashboard {
   margin: 0 auto;
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: 18% 18% 18% 18% 28%;
   grid-template-rows: auto;
   grid-gap: 1px;
-  grid-template-areas: "featured favorites projects groups appointments" "featuredprojects featuredprojects featuredprojects featuredprojects schedule";
+  grid-template-areas: "submissions feedback mentors-tab discussion related"
+  "featuredprojects featuredprojects featuredprojects featuredprojects projects";
 
   button {
     @extend .orange-edge;
@@ -301,36 +344,37 @@ body {
   }
 }
 
-.featured-tab {
-  grid-area: featured;
+.submissions-tab {
+  grid-area: submissions;
 }
 
-.favorites-tab {
-  grid-area: favorites;
+.feedback-tab {
+  grid-area: feedback;
+}
+
+.mentors-tab {
+  grid-area: mentors-tab;
+}
+
+.discussions-tab {
+  grid-area: discussion;
+}
+
+.related-tab {
+  grid-area: related;
 }
 
 .projects-tab {
-  grid-area: projects;
-}
-
-.groups-tab {
-  grid-area: groups;
-}
-
-.appointments-tab {
-  grid-area: appointments;
-}
-
-.schedule-tab {
-  background-color: $light-green;
   text-align: center;
-  color: white;
+  color: $dark-green;
   padding: 10px 20px;
 
   h1 {
     font-size: 15pt;
   }
-  grid-area: schedule;
+  grid-area: projects;
+  grid-row-gap: 10px;
+
 }
 //FEATURED PROJECTS
 .featured-projects {

@@ -3,10 +3,13 @@
   text-decoration: none;
   color: inherit; }
 
-body {
-  margin: 0;
+html, body {
   width: 100%;
-  font-family: "Raleway", sans-serif; }
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  font-family: "Raleway", sans-serif;
+  overflow-x: hidden; }
 
 .container {
   max-width: 1920px;
@@ -31,6 +34,20 @@ body {
 
 .green-round:hover {
   background-color: #19647E; }
+
+.fa {
+  padding: 10px 15px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  border: #EE964B 2px solid;
+  margin: 2px;
+  color: #EE964B; }
+
+.fa:hover {
+  color: white;
+  background: #E56D13; }
 
 .orange-title {
   display: inline-block;
@@ -175,6 +192,9 @@ body {
   #menuToggle {
     display: block; }
 
+  .navbar {
+    height: auto; }
+
   .form {
     display: none; }
 
@@ -186,7 +206,7 @@ body {
   width: 100%;
   font-family: "Raleway", sans-serif;
   display: grid;
-  grid-template-columns: 75% 25%;
+  grid-template-columns: 72% 28%;
   grid-template-areas: "project-info mentor-info"; }
   .project-details .project-info {
     padding: 100px 20px;
@@ -201,47 +221,59 @@ body {
       color: #19647E; }
   .project-details .featured-mentors {
     margin: 0 auto;
+    padding: 100px 50px;
     width: 100%;
     background-image: url("../images/stripes-bg-01.png");
     background-size: cover;
     text-align: center;
     grid-area: mentor-info; }
+    .project-details .featured-mentors .mentor {
+      margin: auto 0;
+      background-color: white;
+      padding: 40px 20px; }
+    .project-details .featured-mentors .mentor-picture {
+      background-size: cover;
+      border: 3px solid #5AAA95;
+      border-radius: 100%;
+      height: 200px;
+      width: 200px;
+      margin: auto; }
 
 .dashboard {
   margin: 0 auto;
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: 18% 18% 18% 18% 28%;
   grid-template-rows: auto;
   grid-gap: 1px;
-  grid-template-areas: "featured favorites projects groups appointments" "featuredprojects featuredprojects featuredprojects featuredprojects schedule"; }
+  grid-template-areas: "submissions feedback mentors-tab discussion related" "featuredprojects featuredprojects featuredprojects featuredprojects projects"; }
   .dashboard button {
     font-size: 15pt;
     font-weight: 400;
     padding: 20px 30px; }
 
-.featured-tab {
-  grid-area: featured; }
+.submissions-tab {
+  grid-area: submissions; }
 
-.favorites-tab {
-  grid-area: favorites; }
+.feedback-tab {
+  grid-area: feedback; }
+
+.mentors-tab {
+  grid-area: mentors-tab; }
+
+.discussions-tab {
+  grid-area: discussion; }
+
+.related-tab {
+  grid-area: related; }
 
 .projects-tab {
-  grid-area: projects; }
-
-.groups-tab {
-  grid-area: groups; }
-
-.appointments-tab {
-  grid-area: appointments; }
-
-.schedule-tab {
-  background-color: #5AAA95;
   text-align: center;
-  color: white;
+  color: #19647E;
   padding: 10px 20px;
-  grid-area: schedule; }
-  .schedule-tab h1 {
+  grid-area: projects;
+  grid-row-gap: 10px; }
+  .projects-tab h1 {
     font-size: 15pt; }
 
 .featured-projects, .favorite-projects, .my-projects, .my-groups {
@@ -273,39 +305,39 @@ body {
   display: none;
   background-color: white; }
 
-.project {
+.project, .project-details .featured-mentors .mentor {
   width: 100%;
   border: 3px solid #5AAA95;
   margin: auto;
   overflow: scroll;
   color: #3F3e3F;
   text-align: left; }
-  .project .fave-icon {
+  .project .fave-icon, .project-details .featured-mentors .mentor .fave-icon {
     background-color: Transparent;
     border: none;
     padding: 0;
     background-image: url("../images/gray_fave.png");
     height: 40px;
     width: 40px; }
-  .project .fave-icon:hover {
+  .project .fave-icon:hover, .project-details .featured-mentors .mentor .fave-icon:hover {
     cursor: pointer;
     background-image: url("../images/orange_fave.png");
     background-color: Transparent; }
-  .project .fave-icon-active {
+  .project .fave-icon-active, .project-details .featured-mentors .mentor .fave-icon-active {
     border: none;
     padding: 0;
     height: 40px;
     width: 40px;
     background-image: url("../images/orange_fave.png");
     background-color: Transparent; }
-  .project .project-head {
+  .project .project-head, .project-details .featured-mentors .mentor .project-head {
     margin: auto;
     padding: 20px 15px;
     color: white;
     font-size: 15pt;
     text-shadow: 3px 4px 20px #000000;
     background-size: cover; }
-  .project .project-body {
+  .project .project-body, .project-details .featured-mentors .mentor .project-body {
     margin: auto;
     padding: 20px 15px; }
 
