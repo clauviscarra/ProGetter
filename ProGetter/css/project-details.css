@@ -19,7 +19,7 @@ body {
   font-size: 15pt;
   border: none;
   padding: 10px 30px;
-  border: 0px; }
+  border: 0; }
 
 .orange-edge:hover, .green-round:hover, .dashboard button:hover {
   background-color: #E56D13;
@@ -140,12 +140,12 @@ body {
     background: #fff;
     border-radius: 3px;
     z-index: 1;
-    transform-origin: 4px 0px;
+    transform-origin: 4px 0;
     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease; }
   #menuToggle span:first-child {
-    transform-origin: 0% 0%; }
+    transform-origin: 0 0; }
   #menuToggle span:nth-last-child(2) {
-    transform-origin: 0% 100%; }
+    transform-origin: 0 100%; }
   #menuToggle input:checked ~ span {
     opacity: 1;
     transform: rotate(45deg) translate(-2px, -1px); }
@@ -155,7 +155,7 @@ body {
   #menuToggle input:checked ~ span:nth-last-child(2) {
     transform: rotate(-45deg) translate(0, -1px); }
   #menuToggle input:checked ~ ul {
-    transform-origin: 0% 0%;
+    transform-origin: 0 0;
     transform: translate(-100%, 0); }
 
 #mobileMenu {
@@ -183,20 +183,29 @@ body {
 .project-details {
   margin: 0;
   height: 100%;
-  padding: 100px 10px;
   width: 100%;
   font-family: "Raleway", sans-serif;
-  display: grid; }
+  display: grid;
+  grid-template-columns: 75% 25%;
+  grid-template-areas: "project-info mentor-info"; }
   .project-details .project-info {
-    padding: 10px 20px; }
+    padding: 100px 20px;
+    grid-area: project-info; }
     .project-details .project-info h1 {
       font-size: 30pt;
       color: #19647E; }
     .project-details .project-info h3 {
       color: #28AFB0; }
     .project-details .project-info p {
-      font-size: 20pt;
+      font-size: 15pt;
       color: #19647E; }
+  .project-details .featured-mentors {
+    margin: 0 auto;
+    width: 100%;
+    background-image: url("../images/stripes-bg-01.png");
+    background-size: cover;
+    text-align: center;
+    grid-area: mentor-info; }
 
 .dashboard {
   margin: 0 auto;
@@ -238,7 +247,7 @@ body {
 .featured-projects, .favorite-projects, .my-projects, .my-groups {
   position: relative;
   width: 90%;
-  padding: 40px 60px 0px 60px;
+  padding: 40px 60px 0;
   grid-area: featuredprojects;
   grid-column-end: span 4;
   display: grid;
@@ -264,39 +273,39 @@ body {
   display: none;
   background-color: white; }
 
-.project, .mentor {
+.project {
   width: 100%;
   border: 3px solid #5AAA95;
   margin: auto;
   overflow: scroll;
   color: #3F3e3F;
   text-align: left; }
-  .project .fave-icon, .mentor .fave-icon {
+  .project .fave-icon {
     background-color: Transparent;
     border: none;
     padding: 0;
     background-image: url("../images/gray_fave.png");
     height: 40px;
     width: 40px; }
-  .project .fave-icon:hover, .mentor .fave-icon:hover {
+  .project .fave-icon:hover {
     cursor: pointer;
     background-image: url("../images/orange_fave.png");
     background-color: Transparent; }
-  .project .fave-icon-active, .mentor .fave-icon-active {
+  .project .fave-icon-active {
     border: none;
     padding: 0;
     height: 40px;
     width: 40px;
     background-image: url("../images/orange_fave.png");
     background-color: Transparent; }
-  .project .project-head, .mentor .project-head {
+  .project .project-head {
     margin: auto;
     padding: 20px 15px;
     color: white;
     font-size: 15pt;
     text-shadow: 3px 4px 20px #000000;
     background-size: cover; }
-  .project .project-body, .mentor .project-body {
+  .project .project-body {
     margin: auto;
     padding: 20px 15px; }
 
@@ -306,33 +315,12 @@ body {
   font-size: 15pt;
   font-weight: 900; }
 
-.featured-mentors {
-  margin: auto;
-  width: 100%;
-  background-image: url("../images/stripes-bg-01.png");
-  background-size: cover;
-  text-align: center; }
-
 .three-columns {
   margin: auto;
   width: 85%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 100px; }
-
-.mentor {
-  margin: auto 0;
-  background-color: white;
-  text-align: left;
-  padding: 40px 10px; }
-
-.mentor-picture {
-  background-size: cover;
-  border: 3px solid #5AAA95;
-  border-radius: 100%;
-  height: 200px;
-  width: 200px;
-  margin: auto; }
 
 @media screen and (max-width: 900px) {
   .dashboard {

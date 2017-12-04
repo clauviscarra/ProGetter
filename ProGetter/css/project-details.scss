@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway:400,900');
+@import url( 'https://fonts.googleapis.com/css?family=Raleway:400,900');
 $font: 'Raleway', sans-serif;
 $dark-orange: #E56D13;
 $light-orange: #EE964B;
@@ -7,28 +7,25 @@ $torquoise: #28AFB0;
 $light-green: #5AAA95;
 $deep-gray: #3F3e3F;
 
-
-
-*{
-  a{
+* {
+  a {
     text-decoration: none;
     color: inherit;
   }
 }
+
 body {
   margin: 0;
-  width:100%;
+  width: 100%;
   font-family: $font;
-
 }
-
-
 
 .container {
   max-width: 1920px;
   margin: 0;
 }
 //BUTTONS
+
 .orange-edge {
   background-color: $light-orange;
   color: white;
@@ -36,7 +33,7 @@ body {
   font-size: 15pt;
   border: none;
   padding: 10px 30px;
-  border: 0px;
+  border: 0;
 }
 
 .orange-edge:hover {
@@ -44,21 +41,17 @@ body {
   cursor: pointer;
 }
 
-
-.green-round{
+.green-round {
   @extend .orange-edge;
   background-color: $light-green;
   border-radius: 50px;
 }
 
-.green-round:hover{
+.green-round:hover {
   background-color: $dark-green;
 }
-
-
-
 //TITLES
-.orange-title{
+.orange-title {
   display: inline-block;
   background-color: white;
   color: $light-orange;
@@ -145,8 +138,8 @@ body {
   grid-area: headerleft;
 }
 
-.big-logo{
-  img{
+.big-logo {
+  img {
     width: 500px;
   }
 }
@@ -158,149 +151,139 @@ body {
 .form {
   grid-area: search;
 }
-
 // MOBILE Navbar Styling
-
-#menuToggle{
+#menuToggle {
   display: none;
   position: relative;
   top: 10px;
   right: -90%;
-
   z-index: 1;
-
   -webkit-user-select: none;
   user-select: none;
 
-input
-{
-  display: block;
-  width: 40px;
-  height: 32px;
-  position: absolute;
-  top: -7px;
-  left: -5px;
+  input {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+    cursor: pointer;
+    opacity: 0;
+    /* hide this */
+    z-index: 2;
+    -webkit-touch-callout: none;
+  }
 
-  cursor: pointer;
+  span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background: #fff;
+    border-radius: 3px;
+    z-index: 1;
+    transform-origin: 4px 0;
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0), background 0.5s cubic-bezier(0.77,0.2,0.05,1.0), opacity 0.55s ease;
+  }
 
-  opacity: 0; /* hide this */
-  z-index: 2;
+  span:first-child {
+    transform-origin: 0 0;
+  }
 
-  -webkit-touch-callout: none;
+  span:nth-last-child(2) {
+    transform-origin: 0 100%;
+  }
+
+  input:checked ~ span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+  }
+
+  input:checked ~ span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+  }
+
+  input:checked ~ span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(0, -1px);
+  }
+
+  input:checked ~ ul {
+    transform-origin: 0 0;
+    transform: translate(-100%, 0);
+  }
 }
 
-span
-{
-  display: block;
-  width: 33px;
-  height: 4px;
-  margin-bottom: 5px;
-  position: relative;
-
-  background: #fff;
-  border-radius: 3px;
-
-  z-index: 1;
-
-  transform-origin: 4px 0px;
-
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              opacity 0.55s ease;
-}
-
-span:first-child
-{
-  transform-origin: 0% 0%;
-}
-
-span:nth-last-child(2)
-{
-  transform-origin: 0% 100%;
-}
-
-input:checked ~ span
-{
-  opacity: 1;
-  transform: rotate(45deg) translate(-2px, -1px);
-
-}
-
-input:checked ~ span:nth-last-child(3)
-{
-  opacity: 0;
-  transform: rotate(0deg) scale(0.2, 0.2);
-}
-input:checked ~ span:nth-last-child(2)
-{
-  transform: rotate(-45deg) translate(0, -1px);
-}
-input:checked ~ ul
-{
-  transform-origin: 0% 0%;
-  transform: translate(-100%, 0);
-}
-
-}
-
-#mobileMenu{
+#mobileMenu {
   background-color: $dark-green;
   transform: translate(80%, 0);
   -webkit-font-smoothing: antialiased;
   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
   z-index: 2;
+  list-style-type: none;
 
-list-style-type: none;
-li{
-  padding: 10px 15px;
-  font-size: 22px;
-  background: $light-orange;
-  margin: auto;
-
-}
+  li {
+    padding: 10px 15px;
+    font-size: 22px;
+    background: $light-orange;
+    margin: auto;
+  }
 }
 @media screen and (max-width:1024px) {
-  #menuToggle{
+  #menuToggle {
     display: block;
   }
-  .form{
+
+  .form {
     display: none;
   }
-  .desktop-menu{
-    display:none;
+
+  .desktop-menu {
+    display: none;
   }
-
-
 }
 //PROJECT DETAILS Styling area
+
 .project-details {
   margin: 0;
   height: 100%;
-  padding: 100px 10px;
   width: 100%;
   font-family: $font;
   display: grid;
+  grid-template-columns: 75% 25%;
+  grid-template-areas: "project-info mentor-info";
 
-.project-info{
-  padding: 10px 20px;
-  h1 {
-    font-size: 30pt;
-    color: $dark-green;
+  .project-info {
+    padding: 100px 20px;
+    grid-area: project-info;
+
+    h1 {
+      font-size: 30pt;
+      color: $dark-green;
+    }
+
+    h3 {
+      color: $torquoise;
+    }
+
+    p {
+      font-size: 15pt;
+      color: $dark-green;
+    }
   }
-  h3{
-    color:$torquoise;
-  }
 
-  p {
-    font-size: 20pt;
-    color: $dark-green;
-
+  .featured-mentors {
+    margin: 0 auto;
+    width: 100%;
+    background-image: url('../images/stripes-bg-01.png');
+    background-size: cover;
+    text-align: center;
+    grid-area: mentor-info;
   }
 }
-}
-
 //DASHBOARD Styling
-
 .dashboard {
   margin: 0 auto;
   width: 100%;
@@ -315,7 +298,6 @@ li{
     font-size: 15pt;
     font-weight: 400;
     padding: 20px 30px;
-
   }
 }
 
@@ -350,14 +332,11 @@ li{
   }
   grid-area: schedule;
 }
-
-
 //FEATURED PROJECTS
-
 .featured-projects {
   position: relative;
   width: 90%;
-  padding: 40px 60px 0px 60px;
+  padding: 40px 60px 0;
   grid-area: featuredprojects;
   grid-column-end: span 4;
   display: grid;
@@ -366,34 +345,30 @@ li{
   height: 100%;
 }
 
-.favorite-projects{
+.favorite-projects {
   @extend .featured-projects;
   display: none;
   background-color: white;
-
 }
 
-.non-user-projects{
+.non-user-projects {
   margin: auto;
   width: 100%;
   background-size: cover;
   text-align: center;
 }
 
-.my-projects{
+.my-projects {
   @extend .featured-projects;
   display: none;
   background-color: white;
-
 }
 
-.my-groups{
+.my-groups {
   @extend .featured-projects;
   display: none;
   background-color: white;
-
 }
-
 
 .project {
   width: 100%;
@@ -402,7 +377,6 @@ li{
   overflow: scroll;
   color: $deep-gray;
   text-align: left;
-
 
   .fave-icon {
     background-color: Transparent;
@@ -413,23 +387,20 @@ li{
     width: 40px;
   }
 
-.fave-icon:hover{
-  cursor: pointer;
-  background-image: url("../images/orange_fave.png");
-  background-color: Transparent;
+  .fave-icon:hover {
+    cursor: pointer;
+    background-image: url("../images/orange_fave.png");
+    background-color: Transparent;
+  }
 
-}
-
-.fave-icon-active{
-  border: none;
-  padding: 0;
-  height: 40px;
-  width: 40px;
-  background-image: url("../images/orange_fave.png");
-  background-color: Transparent;
-
-}
-
+  .fave-icon-active {
+    border: none;
+    padding: 0;
+    height: 40px;
+    width: 40px;
+    background-image: url("../images/orange_fave.png");
+    background-color: Transparent;
+  }
 
   .project-head {
     margin: auto;
@@ -443,79 +414,40 @@ li{
   .project-body {
     margin: auto;
     padding: 20px 15px;
-
-
   }
 }
 
-.center{
+.center {
   text-align: center;
-  color:$dark-green;
+  color: $dark-green;
   font-size: 15pt;
   font-weight: 900;
 }
-
-
-
 // FEATURED MENTORS
-
-.featured-mentors{
-  margin: auto;
-  width: 100%;
-  background-image: url('../images/stripes-bg-01.png');
-  background-size: cover;
-  text-align: center;
-}
-.three-columns{
+.three-columns {
   margin: auto;
   width: 85%;
   display: grid;
   grid-template-columns: repeat(3,1fr);
   grid-gap: 100px;
-
 }
 
-.mentor{
-  margin: auto 0;
-  @extend .project;
-  background-color: white;
-  text-align: left;
-  padding: 40px 10px;
-
-}
-
-.mentor-picture{
-  background-size: cover;
-  border: 3px solid $light-green;
-  border-radius: 100%;
-  height: 200px;
-  width: 200px;
-  margin:auto;
-}
 
 @media screen and (max-width:900px) {
-  .dashboard{
+  .dashboard {
     margin: 0 auto;
     width: 100%;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-areas:
-    "featured"
-    "favorites"
-    "projects"
-    "groups"
-    "featuredprojects"
-    "appointments"
-    "schedule"
-
+    grid-template-areas: "featured" "favorites" "projects" "groups" "featuredprojects" "appointments" "schedule";
   }
 
-  .appointments-tab{
+  .appointments-tab {
     margin-top: 50px;
   }
 
   .featured-projects {
-    margin:auto 0;
+    margin: auto 0;
     padding: 5%;
     grid-area: featuredprojects;
     display: grid;
@@ -523,51 +455,49 @@ li{
     grid-gap: 20px;
     overflow: hidden;
   }
-.favorite-projects{
-  display: none;
-}
-.my-projects{
-  display:none;
-}
-.my-groups{
-  display:none;
-}
-.featured-mentors{
-  margin: auto;
-  padding: 0;
-  background-size: contain;
-}
-  .three-columns{
-    margin:auto 0;
+
+  .favorite-projects {
+    display: none;
+  }
+
+  .my-projects {
+    display: none;
+  }
+
+  .my-groups {
+    display: none;
+  }
+
+  .featured-mentors {
+    margin: auto;
+    padding: 0;
+    background-size: contain;
+  }
+
+  .three-columns {
+    margin: auto 0;
     padding: 5%;
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 20px;
     overflow: hidden;
-
   }
-
 }
-
-
-
-
-
-
 //FOOTER Styling
-.footer{
+.footer {
   background-color: $dark-green;
   margin: auto;
   text-align: center;
   color: white;
   padding: 30px;
-  a{
+
+  a {
     font-size: 15pt;
     text-decoration: none;
-    color:white;
-  }
-  a:hover{
-    color: $torquoise;
+    color: white;
   }
 
+  a:hover {
+    color: $torquoise;
+  }
 }
