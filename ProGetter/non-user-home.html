@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>ProGetter - Home</title>
+  <title>ProGetter</title>
   <meta name="viewport" content="width=device-width">
   <link rel="stylesheet" href="./dist/aos.css" />
   <link rel="stylesheet" type="text/css" href="css/style.css">
@@ -15,32 +15,6 @@
 $(document).ready(function(){
   $('.fave-icon').click(function(){
     $(this).toggleClass("fave-icon-active");
- });
-
- $('.favorites-tab').click(function(){
-   $(".favorite-projects").slideToggle();
-   $('.favorites-tab').css("background-color","#E56D13");
-   $('.featured-tab').css("background-color","#EE964B");
-   $('.projects-tab').css("background-color","#EE964B");
-   $('.groups-tab').css("background-color","#EE964B");
-
-
- });
-
- $('.projects-tab').click(function(){
-   $(".my-projects").slideToggle();
-   $('.projects-tab').css("background-color","#E56D13");
-   $('.featured-tab').css("background-color","#EE964B");
-   $('.favorites-tab').css("background-color","#EE964B");
-   $('.groups-tab').css("background-color","#EE964B");
- });
-
- $('.groups-tab').click(function(){
-   $(".my-groups").slideToggle();
-   $('.groups-tab').css("background-color","#E56D13");
-   $('.featured-tab').css("background-color","#EE964B");
-   $('.favorites-tab').css("background-color","#EE964B");
-   $('.projects-tab').css("background-color","#EE964B");
  });
 
 
@@ -97,89 +71,50 @@ $(document).ready(function(){
 
 
     <!-- MAIN -->
-    <div class="main">
-      <!-- Populate user name using session -->
-      <h1  data-aos="fade-up">Hello, Cheryl!</h1>
-      <p data-aos="fade-up">Pick up where you left off.</p>
+    <div class="main" style="background-image:url('images/girls-science.jpg')">
 
-      <button data-aos="fade-up" class="orange-edge" type="button" name="button"> <a href="#" style="color:white;text-decoration:none;">Jump to project</a></button>
+      <h1  data-aos="fade-up" style="font-size: 50pt">Projects designed by field experts</h1>
+      <p data-aos="fade-up">Start your future. Find your passion.</p>
+
+      <button data-aos="fade-up" class="orange-edge" type="button" name="button"> <a href="#" style="color:white;text-decoration:none;">Learn More</a></button>
 
     </div>
 
-    <!-- DASHBOARD -->
-    <div class="dashboard">
+<!-- PROJECTS -->
 
-      <button type="button" name="button" class="featured-tab" style="background-color:#E56D13;"> Featured Projects</button>
-      <button type="button" name="button" class="favorites-tab">Favorites</button>
-      <button type="button" name="button" class="projects-tab">My Projects</button>
-      <button type="button" name="button" class="groups-tab">My Groups</button>
-      <button type="button" name="button" class="appointments-tab" style="background-color:#28647E;">My Appointments</button>
+<div class="non-user-projects">
 
-      <div class="schedule-tab">
-        <!-- Insert code that will populate appointmnets, including mentor name, title, date and time. Here, each is coded manually for esthetic purposes. -->
-        <img src="images/white_time_icon.png" alt="time">
-        <h1>MENTOR NAME</h1>
-        <p>Mentor Title</p>
-        <p>June 29, 2017</p>
-        <p>10:30am</p>
-        <p>30 minutes</p>
-        <hr>
-        <br>
-        <img src="images/white_time_icon.png" alt="time">
-        <h1>MENTOR NAME</h1>
-        <p>Mentor Title</p>
-        <p>June 29, 2017</p>
-        <p>10:30am</p>
-        <p>30 minutes</p>
-        <hr>
-        <br>
-        <img src="images/white_time_icon.png" alt="time">
-        <h1>MENTOR NAME</h1>
-        <p>Mentor Title</p>
-        <p>June 29, 2017</p>
-        <p>10:30am</p>
-        <p>30 minutes</p>
-        <hr>
+<div class="orange-title"> <h1>Featured projects</h1>
 
-      </div>
+</div>
 
-      <!-- FEATURED PROJECTS -->
+<div class="three-columns">
 
-      <div class="featured-projects">
-        <!-- Insert code that will populate projects including title, description, grade, career and time. Here, each is coded manually, but ideally we would have a forloop that would populate each project -->
+  <div class="project"  data-aos="fade-up">
+    <div class="project-head" style="background-image: url('images/math_kids.jpeg')">
+      <!--Populate background that matches appropriate project type -->
 
-        <!-- <div class=""></div>
-        <div class="orange-title">
-          <h1 style="font-size:18pt;">Featured projects</h1>
-        </div>
-        <div class=""></div> -->
+      <button type="button" name="button" class="fave-icon"> </button>
+      <hr style="height:50px; border:none;">
+      <p> MATH <br> Skill level: Intermediate </p>
+    </div>
+    <div class="project-body">
 
+      <strong><a href="#">PROJECT NAME</a></strong> <br>
+      <p>Lorem ipsum dolor sit amet, consecuteur adipiscint elit, sed </p>
 
-        <div class="project"  data-aos="fade-up">
+      <img src="images/grade_icon.png" alt="grade" style="margin-right:20%;">
+      <img src="images/career_icon.png" alt="grade">
+      <img src="images/time_icon.png" alt="grade" style="margin-left:20%;">
+      <br>
+      <span style="margin-right:10%;color:#28AFB0;text-align:center;font-size:9pt;">Grade 6</span>
+      <span style="color:#28AFB0;text-align:center;font-size:9pt;">Financial Analyst</span>
+      <span style="margin-left:10%;color:#28AFB0;text-align:center;font-size:9pt;">2 weeks</span>
 
-          <div class="project-head" style="background-image: url('images/math_kids.jpeg')">
-            <!--Populate background that matches appropriate project type -->
+    </div>
 
-            <button type="button" name="button" class="fave-icon"> </button>
-            <hr style="height:50px; border:none;">
-            <p> MATH <br> Skill level: Intermediate </p>
-          </div>
-          <div class="project-body">
+  </div>
 
-            <strong><a href="#">PROJECT NAME</a></strong> <br>
-            <p>Lorem ipsum dolor sit amet, consecuteur adipiscint elit, sed </p>
-
-            <img src="images/grade_icon.png" alt="grade" style="margin-right:20%;">
-            <img src="images/career_icon.png" alt="grade">
-            <img src="images/time_icon.png" alt="grade" style="margin-left:20%;">
-            <br>
-            <span style="margin-right:10%;color:#28AFB0;text-align:center;font-size:9pt;">Grade 6</span>
-            <span style="color:#28AFB0;text-align:center;font-size:9pt;">Financial Analyst</span>
-            <span style="margin-left:10%;color:#28AFB0;text-align:center;font-size:9pt;">2 weeks</span>
-
-          </div>
-
-        </div>
 
         <div class="project" data-aos="fade-up">
           <div class="project-head" style="background-image: url('images/girl-writing.jpg')">
@@ -191,7 +126,7 @@ $(document).ready(function(){
           </div>
           <div class="project-body">
 
-            <strong><a href="#">PROJECT NAME</a></strong> <br>
+            <strong> <a href="#">PROJECT NAME</a></strong> <br>
             <p>Lorem ipsum dolor sit amet, consecuteur adipiscint elit, sed </p>
 
             <img src="images/grade_icon.png" alt="grade" style="margin-right:20%;">
@@ -206,6 +141,7 @@ $(document).ready(function(){
 
 
         </div>
+
         <div class="project" data-aos="fade-up">
           <div class="project-head" style="background-image: url('images/kids-design.jpg')">
             <!--Populate background that matches appropriate project type -->
@@ -216,7 +152,7 @@ $(document).ready(function(){
           </div>
           <div class="project-body">
 
-            <strong><a href="#"></a>PROJECT NAME</strong> <br>
+            <strong><a href="#">PROJECT NAME</a></strong> <br>
             <p>Lorem ipsum dolor sit amet, consecuteur adipiscint elit, sed </p>
 
             <img src="images/grade_icon.png" alt="grade" style="margin-right:20%;">
@@ -303,40 +239,19 @@ $(document).ready(function(){
             <span style="margin-left:10%;color:#28AFB0;text-align:center;font-size:9pt;">2 weeks</span>
 
           </div>
-
         </div>
 
+</div>
 
-      </div>
-
-      <!-- FAVORITE PROJECTS -->
-      <div class="favorite-projects">
-        <p>Insert code for favorite projects</p>
-
-      </div>
-
-      <!-- MY PROJECTS -->
-      <div class="my-projects">
-        <p>Insert code for "my projects"</p>
-
-      </div>
-
-      <!-- MY GROUPS -->
-      <div class="my-groups">
-        <p>Insert code for "my groups" </p>
-
-      </div>
-
-
-    </div>
+</div>
 
 
     <div class="center">
       <br>
       <br>
       <br>
-      <p class="animated fadeInRight">Do you have an idea for a project?</p>
-      <button type="button" class="green-round" name="button">Submit project idea</button>
+
+      <button type="button" class="green-round" name="button">Explore Projects</button>
       <br>
       <br>
     </div>
@@ -351,7 +266,7 @@ $(document).ready(function(){
 
       <div class="three-columns">
 
-        <div data-aos="fade-up" class="mentor">
+        <div data-aos="fade-up" class="mentor"data-aos="fade-up">
           <div class="mentor-picture" style="background-image: url('images/mentor_image-01.png')">
           </div>
           <br>
@@ -387,7 +302,7 @@ $(document).ready(function(){
       <br>
       <br>
 
-      <button class="green-round" type="button" name="button">Become a mentor</button>
+      <button class="green-round" type="button" name="button"><a href="#">Become a mentor</a></button>
 
       <br>
       <br>
