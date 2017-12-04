@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>ProGetter - Project Details</title>
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="./dist/aos.css" />
+  <link rel="stylesheet" type="text/css" href="css/project-details.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+
+  <script>
+    $(document).ready(function() {
+      $('.fave-icon').click(function() {
+        $(this).toggleClass("fave-icon-active");
+      });
+
+    });
+  </script>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- NAVBAR -->
+    <div class="navbar">
+
+      <div class="logo">
+        <img src="images/logo_1.png" alt="ProGetter-Logo">
+
+      </div>
+      <div class="navbar-right">
+        <div class="desktop-menu">
+          <a href="#">ABOUT</a>
+          <a href="#" style="display:none;">JOIN</a>
+          <a href="#">BECOME A MENTOR</a>
+
+        </div>
+
+        <!-- TOGGLE/MOBILE NAVBAR -->
+        <div id="menuToggle">
+          <input type="checkbox">
+
+          <span></span>
+          <span></span>
+          <span></span>
+
+          <ul id="mobileMenu">
+            <a href="#">
+              <li>About</li>
+            </a>
+            <a href="#">
+              <li>Become a Mentor</li>
+            </a>
+
+          </ul>
+
+        </div>
+      </div>
+
+
+      <div class="form">
+        <input type="search" placeholder="Search">
+        <button type="submit"> <img src="images/search_icon.png" alt=""> </button>
+      </div>
+
+    </div>
+    <!-- PROJECT DETAILS -->
+
+    <div class="project-details">
+      <div class="project-info">
+        <h1>PROJECT NAME</h1>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euis-mod tincidunt ut laoreet dolore magna aliquam erat volutap. Ut wisi enim ad minim veniam, quis nostrud exerci.</p>
+        <h3>Skill level: Beginner</h3>
+        <img src="images/project_image.png" alt="project_image" style="width:100%">
+
+        <img src="images/math_icon.png" alt="math" style="margin-left:10px;margin-right:60px; width:5%;">
+        <img src="images/grade_icon.png" alt="grade" style="margin-right:60px; width:5%;">
+        <img src="images/career_icon.png" alt="grade" style="margin-right:60px; width:5%;">
+        <img src="images/time_icon.png" alt="grade" style="margin-right:60px; width:5%;">
+        <br>
+
+        <span style="margin-left:10px;margin-right:40px;color:#28AFB0;text-align:center;font-size:15pt;">Math</span>
+        <span style="margin-right:40px;color:#28AFB0;text-align:center;font-size:15pt;">Grade 6</span>
+
+        <span style="margin-right:40px;color:#28AFB0;text-align:center;font-size:15pt;">Finance</span>
+
+        <span style="margin-right:40px;color:#28AFB0;text-align:center;font-size:15pt;">2 Weeks</span>
+
+      </div>
+      <div class="featured-mentors">
+
+        <h1 class="orange-title">Created by</h1>
+
+        <div class="mentor" style="width:80%;text-align:center;">
+          <div class="mentor-picture" style="background-image: url('images/mentor_image-01.png');">
+          </div>
+          <br>
+
+          <strong>MENTOR NAME </strong><br>
+          <p>Job Title </p>
+          <a href="#" class="fa fa-linkedin"></a>
+          <a href="#" class="fa fa-facebook"></a>
+          <a href="#" class="fa fa-twitter"></a>
+
+
+        </div>
+        <br>
+        <br>
+
+        <button type="button" name="button" class="orange-edge" style="border-radius:50px"><a href="#">Sign up for class</a></button>
+      </div>
+    </div>
+
+      <!-- DASHBOARD -->
+      <img src="images/faded_dashboard.png" alt="">
+
+      <div class="three-columns">
+        <span></span>
+        <button type="button" name="button" class="orange-edge" style="border-radius:50px"><a href="#">Join ProGetter to access class</a></button>
+        <span></span>
+      </div>
+
+
+<br>
+
+      <br>
+
+
+
+      <!-- FOOTER -->
+
+      <div class="footer">
+        <img src="images/logo_2.png" alt="logo2">
+        <br>
+        <br>
+        <a href="#">About | </a> <a href="#">Team | </a> <a href="#">Press | </a> <a href="#">FAQs | </a> <a href="#">Contact | </a> <a href="#">Terms </a>
+
+      </div>
+
+    </div>
+
+
+
+    <script src="./dist/aos.js"></script>
+    <script>
+      AOS.init({
+        easing: 'ease-in-out-sine'
+      });
+    </script>
+
+
+
+
+</body>
+
+
+
+
+</html>

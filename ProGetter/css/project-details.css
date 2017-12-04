@@ -183,6 +183,7 @@ html, body {
   z-index: 2;
   list-style-type: none; }
   #mobileMenu li {
+    display: inline-block;
     padding: 10px 15px;
     font-size: 22px;
     background: #EE964B;
@@ -239,6 +240,11 @@ html, body {
       width: 200px;
       margin: auto; }
 
+@media screen and (max-width: 900px) {
+  .project-details {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "project-info" "mentor-info"; } }
 .dashboard {
   margin: 0 auto;
   width: 100%;
@@ -269,41 +275,31 @@ html, body {
 
 .projects-tab {
   text-align: center;
-  color: #19647E;
   padding: 10px 20px;
   grid-area: projects;
-  grid-row-gap: 10px; }
+  grid-gap: 30px; }
   .projects-tab h1 {
     font-size: 15pt; }
 
-.featured-projects, .favorite-projects, .my-projects, .my-groups {
-  position: relative;
+.project-instructions, .my-submissions, .my-feedback, .my-mentors, .my-discussions {
   width: 90%;
-  padding: 40px 60px 0;
+  padding: 20px 20px 0;
   grid-area: featuredprojects;
   grid-column-end: span 4;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 30px;
-  height: 100%; }
+  color: #19647E; }
 
-.favorite-projects {
-  display: none;
-  background-color: white; }
+.my-submissions {
+  display: none; }
 
-.non-user-projects {
-  margin: auto;
-  width: 100%;
-  background-size: cover;
-  text-align: center; }
+.my-feedback {
+  display: none; }
 
-.my-projects {
-  display: none;
-  background-color: white; }
+.my-mentors {
+  display: none; }
 
-.my-groups {
-  display: none;
-  background-color: white; }
+.my-discussions {
+  display: none; }
 
 .project, .project-details .featured-mentors .mentor {
   width: 100%;
@@ -360,12 +356,12 @@ html, body {
     width: 100%;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-areas: "featured" "favorites" "projects" "groups" "featuredprojects" "appointments" "schedule"; }
+    grid-template-areas: "submissions" "freedback" "mentors-tab" "discussion"  "related" "projects" "featuredprojects"; }
 
   .appointments-tab {
     margin-top: 50px; }
 
-  .featured-projects, .favorite-projects, .my-projects, .my-groups {
+  .featured-projects {
     margin: auto 0;
     padding: 5%;
     grid-area: featuredprojects;

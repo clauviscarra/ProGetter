@@ -39,6 +39,7 @@ html,body
   border: none;
   padding: 10px 30px;
   border: 0;
+
 }
 
 .orange-edge:hover {
@@ -246,6 +247,7 @@ html,body
   list-style-type: none;
 
   li {
+    display: inline-block;
     padding: 10px 15px;
     font-size: 22px;
     background: $light-orange;
@@ -325,6 +327,19 @@ html,body
   }
 
 }
+
+@media screen and (max-width:900px){
+  .project-details{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "project-info" "mentor-info";
+
+  }
+
+
+}
+
+
 //DASHBOARD Styling
 .dashboard {
   margin: 0 auto;
@@ -366,52 +381,44 @@ html,body
 
 .projects-tab {
   text-align: center;
-  color: $dark-green;
   padding: 10px 20px;
 
   h1 {
     font-size: 15pt;
   }
   grid-area: projects;
-  grid-row-gap: 10px;
+  grid-gap: 30px;
 
 }
-//FEATURED PROJECTS
-.featured-projects {
-  position: relative;
+
+
+//INSTRUCTIONS FOR PROJECTS
+.project-instructions {
   width: 90%;
-  padding: 40px 60px 0;
+  padding: 20px 20px 0;
   grid-area: featuredprojects;
   grid-column-end: span 4;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 30px;
-  height: 100%;
+  color: $dark-green;
+
 }
 
-.favorite-projects {
-  @extend .featured-projects;
+.my-submissions{
+  @extend .project-instructions;
   display: none;
-  background-color: white;
 }
-
-.non-user-projects {
-  margin: auto;
-  width: 100%;
-  background-size: cover;
-  text-align: center;
-}
-
-.my-projects {
-  @extend .featured-projects;
+.my-feedback{
+  @extend .project-instructions;
   display: none;
-  background-color: white;
+}
+.my-mentors{
+  @extend .project-instructions;
+  display: none;
 }
 
-.my-groups {
-  @extend .featured-projects;
+.my-discussions{
+  @extend .project-instructions;
   display: none;
-  background-color: white;
 }
 
 .project {
@@ -483,7 +490,7 @@ html,body
     width: 100%;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-areas: "featured" "favorites" "projects" "groups" "featuredprojects" "appointments" "schedule";
+    grid-template-areas: "submissions" "freedback" "mentors-tab" "discussion"  "related" "projects" "featuredprojects";
   }
 
   .appointments-tab {
