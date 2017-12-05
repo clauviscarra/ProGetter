@@ -134,13 +134,14 @@ html,body
   border-radius: 5px;
   background-color: rgba(0, 0, 0, 0);
 
-  input {
+  input [type=text]{
     color: white;
     vertical-align: middle;
-    border: none;
-    width: 75%;
+    border: Transparent;
+    width: 45%;
     padding: 0;
-    background-color: Transparent;
+    background-color: rgba(0, 0, 0, 0);
+    vertical-align: middle;
   }
 
   button {
@@ -153,6 +154,9 @@ html,body
       display: inline;
       vertical-align: middle;
     }
+  }
+  button:hover{
+    cursor: pointer;
   }
 }
 
@@ -493,9 +497,12 @@ html,body
     grid-template-areas: "submissions" "freedback" "mentors-tab" "discussion"  "related" "projects" "featuredprojects";
   }
 
-  .appointments-tab {
-    margin-top: 50px;
+.project-instructions{
+  h1{
+  text-align: center;
   }
+  padding:20px;
+}
 
   .featured-projects {
     margin: auto 0;
@@ -505,18 +512,6 @@ html,body
     grid-template-columns: 1fr;
     grid-gap: 20px;
     overflow: hidden;
-  }
-
-  .favorite-projects {
-    display: none;
-  }
-
-  .my-projects {
-    display: none;
-  }
-
-  .my-groups {
-    display: none;
   }
 
   .featured-mentors {

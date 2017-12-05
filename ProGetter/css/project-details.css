@@ -100,13 +100,14 @@ html, body {
   border: 1px solid white;
   border-radius: 5px;
   background-color: rgba(0, 0, 0, 0); }
-  .form input {
+  .form input [type=text] {
     color: white;
     vertical-align: middle;
-    border: none;
-    width: 75%;
+    border: Transparent;
+    width: 45%;
     padding: 0;
-    background-color: Transparent; }
+    background-color: rgba(0, 0, 0, 0);
+    vertical-align: middle; }
   .form button {
     background-color: rgba(0, 0, 0, 0);
     border: none;
@@ -115,6 +116,8 @@ html, body {
       width: 20px;
       display: inline;
       vertical-align: middle; }
+  .form button:hover {
+    cursor: pointer; }
 
 .logo {
   grid-area: headerleft; }
@@ -358,8 +361,10 @@ html, body {
     grid-template-columns: 100%;
     grid-template-areas: "submissions" "freedback" "mentors-tab" "discussion"  "related" "projects" "featuredprojects"; }
 
-  .appointments-tab {
-    margin-top: 50px; }
+  .project-instructions, .my-submissions, .my-feedback, .my-mentors, .my-discussions {
+    padding: 20px; }
+    .project-instructions h1, .my-submissions h1, .my-feedback h1, .my-mentors h1, .my-discussions h1 {
+      text-align: center; }
 
   .featured-projects {
     margin: auto 0;
@@ -369,15 +374,6 @@ html, body {
     grid-template-columns: 1fr;
     grid-gap: 20px;
     overflow: hidden; }
-
-  .favorite-projects {
-    display: none; }
-
-  .my-projects {
-    display: none; }
-
-  .my-groups {
-    display: none; }
 
   .featured-mentors {
     margin: auto;
