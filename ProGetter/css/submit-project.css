@@ -15,7 +15,7 @@ html, body {
   max-width: 1920px;
   margin: 0; }
 
-.orange-edge, .green-round, .dashboard button {
+.orange-edge, .green-round {
   background-color: #EE964B;
   color: white;
   font-weight: 900;
@@ -24,7 +24,7 @@ html, body {
   padding: 10px 30px;
   border: 0; }
 
-.orange-edge:hover, .green-round:hover, .dashboard button:hover {
+.orange-edge:hover, .green-round:hover {
   background-color: #E56D13;
   cursor: pointer; }
 
@@ -204,192 +204,30 @@ html, body {
 
   .desktop-menu {
     display: none; } }
-.project-details {
-  margin: 0;
+.submit-project {
+  margin: 0 auto;
   height: 100%;
   width: 100%;
   font-family: "Raleway", sans-serif;
-  display: grid;
-  grid-template-columns: 72% 28%;
-  grid-template-areas: "project-info mentor-info"; }
-  .project-details .project-info {
-    padding: 100px 20px;
-    grid-area: project-info; }
-    .project-details .project-info h1 {
-      font-size: 30pt;
-      color: #19647E; }
-    .project-details .project-info h3 {
-      color: #28AFB0; }
-    .project-details .project-info p {
-      font-size: 15pt;
-      color: #19647E; }
-  .project-details .featured-mentors {
-    margin: 0 auto;
-    padding: 100px 50px;
-    width: 100%;
-    background-image: url("../images/stripes-bg-01.png");
-    background-size: cover;
-    text-align: center;
-    grid-area: mentor-info; }
-    .project-details .featured-mentors .mentor {
-      margin: auto 0;
-      background-color: white;
-      padding: 40px 20px; }
-    .project-details .featured-mentors .mentor-picture {
-      background-size: cover;
-      border: 3px solid #5AAA95;
-      border-radius: 100%;
-      height: 200px;
-      width: 200px;
-      margin: auto; }
+  padding: 40px; }
+  .submit-project .submit-form h1 {
+    font-size: 30pt;
+    color: #19647E; }
+  .submit-project .submit-form h3 {
+    color: #28AFB0; }
+  .submit-project .submit-form p {
+    font-size: 15pt;
+    color: #19647E; }
 
 @media screen and (max-width: 900px) {
-  .project-details {
+  .submit-project {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-areas: "project-info" "mentor-info"; } }
-.dashboard {
-  margin: 0 auto;
-  width: 100%;
-  display: grid;
-  grid-template-columns: 18% 18% 18% 18% 28%;
-  grid-template-rows: auto;
-  grid-gap: 1px;
-  grid-template-areas: "submissions feedback mentors-tab discussion related" "featuredprojects featuredprojects featuredprojects featuredprojects projects"; }
-  .dashboard button {
-    font-size: 15pt;
-    font-weight: 400;
-    padding: 20px 30px; }
-
-.submissions-tab {
-  grid-area: submissions; }
-
-.feedback-tab {
-  grid-area: feedback; }
-
-.mentors-tab {
-  grid-area: mentors-tab; }
-
-.discussions-tab {
-  grid-area: discussion; }
-
-.related-tab {
-  grid-area: related; }
-
-.projects-tab {
-  text-align: center;
-  padding: 10px 20px;
-  grid-area: projects;
-  grid-gap: 30px; }
-  .projects-tab h1 {
-    font-size: 15pt; }
-
-.project-instructions, .my-submissions, .my-feedback, .my-mentors, .my-discussions {
-  width: 90%;
-  padding: 20px 20px 0;
-  grid-area: featuredprojects;
-  grid-column-end: span 4;
-  display: grid;
-  color: #19647E; }
-
-.my-submissions {
-  display: none; }
-
-.my-feedback {
-  display: none; }
-
-.my-mentors {
-  display: none; }
-
-.my-discussions {
-  display: none; }
-
-.project, .project-details .featured-mentors .mentor {
-  width: 100%;
-  border: 3px solid #5AAA95;
-  margin: auto;
-  overflow: scroll;
-  color: #3F3e3F;
-  text-align: left; }
-  .project .fave-icon, .project-details .featured-mentors .mentor .fave-icon {
-    background-color: Transparent;
-    border: none;
-    padding: 0;
-    background-image: url("../images/gray_fave.png");
-    height: 40px;
-    width: 40px; }
-  .project .fave-icon:hover, .project-details .featured-mentors .mentor .fave-icon:hover {
-    cursor: pointer;
-    background-image: url("../images/orange_fave.png");
-    background-color: Transparent; }
-  .project .fave-icon-active, .project-details .featured-mentors .mentor .fave-icon-active {
-    border: none;
-    padding: 0;
-    height: 40px;
-    width: 40px;
-    background-image: url("../images/orange_fave.png");
-    background-color: Transparent; }
-  .project .project-head, .project-details .featured-mentors .mentor .project-head {
-    margin: auto;
-    padding: 20px 15px;
-    color: white;
-    font-size: 15pt;
-    text-shadow: 3px 4px 20px #000000;
-    background-size: cover; }
-  .project .project-body, .project-details .featured-mentors .mentor .project-body {
-    margin: auto;
-    padding: 20px 15px; }
-
-.center {
-  text-align: center;
-  color: #19647E;
-  font-size: 15pt;
-  font-weight: 900; }
-
-.three-columns {
-  margin: auto;
-  width: 85%;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 100px; }
-
-@media screen and (max-width: 900px) {
-  .dashboard {
-    margin: 0 auto;
-    width: 100%;
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-areas: "submissions" "freedback" "mentors-tab" "discussion"  "related" "projects" "featuredprojects"; }
-
-  .project-instructions, .my-submissions, .my-feedback, .my-mentors, .my-discussions {
-    padding: 20px; }
-    .project-instructions h1, .my-submissions h1, .my-feedback h1, .my-mentors h1, .my-discussions h1 {
-      text-align: center; }
-
-  .featured-projects {
-    margin: auto 0;
-    padding: 5%;
-    grid-area: featuredprojects;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: 20px;
-    overflow: hidden; }
-
-  .featured-mentors {
-    margin: auto;
-    padding: 0;
-    background-size: contain; }
-
-  .three-columns {
-    margin: auto 0;
-    padding: 5%;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: 20px;
-    overflow: hidden; } }
+    grid-template-areas: "col1" "col2"; } }
 .footer {
   background-color: #19647E;
-  margin: auto;
+  margin: 0 auto;
+  margin-bottom: 0;
   text-align: center;
   color: white;
   padding: 30px; }
@@ -400,4 +238,4 @@ html, body {
   .footer a:hover {
     color: #28AFB0; }
 
-/*# sourceMappingURL=project-details.css.map */
+/*# sourceMappingURL=submit-project.css.map */
