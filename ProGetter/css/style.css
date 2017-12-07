@@ -1,7 +1,16 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway:400,900");
-* a {
-  text-decoration: none;
-  color: inherit; }
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility; }
+  * a {
+    text-decoration: none;
+    color: inherit; }
 
 body {
   margin: 0;
@@ -42,7 +51,7 @@ body {
 
 .navbar {
   z-index: 3;
-  margin: 0;
+  margin: 0 auto;
   padding: 20px 30px;
   font-family: "Raleway", sans-serif;
   overflow: hidden;
@@ -75,10 +84,10 @@ body {
     color: #28AFB0; }
 
 .form {
-  width: 170px;
+  width: 200px;
   overflow: hidden;
-  height: 25px;
-  padding: 5px 10px;
+  height: 35px;
+  padding: 2px 5px;
   color: white;
   border: 1px solid white;
   border-radius: 5px;
@@ -100,7 +109,11 @@ body {
       vertical-align: middle; }
 
 .logo {
-  grid-area: headerleft; }
+  grid-area: headerleft;
+  background-image: url("../images/logo_1.png");
+  height: auto;
+  background-repeat: no-repeat;
+  background-size: auto; }
 
 .big-logo img {
   width: 500px; }
@@ -179,7 +192,10 @@ body {
     display: none; }
 
   .desktop-menu {
-    display: none; } }
+    display: none; }
+
+  .logo {
+    background-image: url("../images/PG-small-logo.png"); } }
 .main {
   margin: 0;
   background-image: url("../images/girl-garden.jpeg");
@@ -241,7 +257,7 @@ body {
 
 .featured-projects, .favorite-projects, .my-projects, .my-groups {
   position: relative;
-  width: 90%;
+  width: 100%;
   padding: 40px 60px 0px 60px;
   grid-area: featuredprojects;
   grid-column-end: span 4;
@@ -319,7 +335,8 @@ body {
 
 .three-columns {
   margin: auto;
-  width: 85%;
+  padding: 5%;
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 100px; }

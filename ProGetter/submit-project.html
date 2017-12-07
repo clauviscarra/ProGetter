@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>ProGetter - Submit A Project</title>
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="./dist/aos.css" />
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+
+<script>
+$(document).ready(function(){
+  $('.fave-icon').click(function(){
+    $(this).toggleClass("fave-icon-active");
+ });
+
+
+
+
+});
+
+</script>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- NAVBAR -->
+    <div class="navbar">
+
+      <div class="logo">
+        <img src="images/logo_1.png" alt="ProGetter-Logo" >
+
+      </div>
+      <div class="navbar-right">
+        <div class="desktop-menu">
+          <a href="#">ABOUT</a>
+          <a href="#" style="display:none;">JOIN</a>
+          <a href="#">BECOME A MENTOR</a>
+
+        </div>
+
+        <!-- TOGGLE/MOBILE NAVBAR -->
+        <div id="menuToggle">
+          <input type="checkbox">
+
+          <span></span>
+          <span></span>
+          <span></span>
+
+          <ul id="mobileMenu">
+            <a href="#"> <li>About</li> </a>
+            <a href="#"> <li>Become a Mentor</li> </a>
+
+          </ul>
+
+        </div>
+      </div>
+
+
+      <div class="form">
+        <input type="search" placeholder="Search">
+        <button type="submit"> <img src="images/search_icon.png" alt=""> </button>
+      </div>
+
+    </div>
+
+
+
+    <!-- SUBMIT A NEW PROJECT -->
+    <div class="submit-container">
+      <div class="new-project-description">
+        <h1>SUBMIT A NEW PROJECT IDEA</h1>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euis-mod tincidunt ut laoreet dolore magna aliquam erat volutap. Ut wisi enim ad minim veniam, quis nostrud exerci.</p>
+
+
+      </div>
+
+      <div class="new-project-form">
+
+        <form id="submit-project-info" action="index.html" method="post">
+          <fieldset>
+            <input id="project-name" type="text" name="" value="" placeholder="PROJECT NAME">
+
+          </fieldset>
+
+        <fieldset>
+          <select  id="project-select"class="" name="" placeholder="ENTER PROJECT NAME">
+            <option value="Math">Math</option>
+            <option value="Business">Business</option>
+            <option value="Design">Design</option>
+            <option value="Finance">Finance</option>
+            <option value="English">English</option>
+
+          </select>
+        </fieldset>
+
+
+        <fieldset>
+          <label for="">PROJECT DESCRIPTION:</label>
+          <textarea  placeholder="Describe what the project is about and the overall learning goals for the assignment (2,000 words max)"></textarea>
+
+
+        </fieldset>
+
+        <fieldset>
+          <label for="">INSTRUCTIONS:</label>
+
+          <textarea placeholder="Provide detailed instructions on how to be successful with this project. Explain the task they will need to complete and the criteria for success (3,000 words max)"></textarea>
+
+        </fieldset>
+
+        <fieldset>
+          <label for="">SKILL LEVEL:</label>
+          <select class="" name="" placeholder="Select Skill level">
+            <option value="Beginner">Beginner</option>
+            <option value="Intermediate">Intermediate</option>
+            <option value="Advanced">Advanced</option>
+
+          </select>
+        </fieldset>
+
+        <fieldset>
+          <label for="">TOPICS COVERED:</label>
+          <select class="" name="" placeholder="Select Skill level">
+            <option value="Topics listed by grade level">Topics listed by grade level</option>
+            <option value="Intermediate">Intermediate</option>
+            <option value="Advanced">Advanced</option>
+
+          </select>
+        </fieldset>
+
+        <fieldset>
+          <label for="">TIME FRAME:</label>
+          <select class="" name="" placeholder="Select Skill level">
+            <option value="Number of days to complete project">Number of days to complete project</option>
+            <option value="Intermediate">Intermediate</option>
+            <option value="Advanced">Advanced</option>
+
+          </select>
+        </fieldset>
+
+        <fieldset>
+          <label for="">WHAT IS NEEDED:</label>
+          <input type="text" name="" value="" placeholder="List any material or item the student will need">
+          <input type="text" name="" value="" placeholder="List any material or item the student will need">
+          <input type="text" name="" value="" placeholder="List any material or item the student will need">
+          <input type="submit" name="ADD TO LIST" value="ADD TO LIST">
+        </fieldset>
+
+        <fieldset>
+          <label for="">DELIVERABLES:</label>
+          <input type="text" name="" value="" placeholder="List the key items the student should produce">
+          <input type="text" name="" value="" placeholder="List the key items the student should produce">
+          <input type="text" name="" value="" placeholder="List the key items the student should produce">
+          <input type="submit" name="ADD TO LIST" value="ADD TO LIST">
+        </fieldset>
+
+        <fieldset>
+          <a href="#">SELECT IMAGE FROM THE GALLERY</a>
+          <input type="submit" name="" value="UPLOAD FILE">
+        </fieldset>
+
+        <fieldset>
+          <button type="submit" name="SAVE AND CONTINUE" class="orange-edge">SAVE AND CONTINUE</button>
+        </fieldset>
+
+
+
+        </form>
+
+      </div>
+
+    </div>
+
+
+    <!-- FOOTER -->
+
+    <div class="footer">
+      <img src="images/logo_2.png" alt="logo2">
+      <br>
+      <br>
+      <a href="#">About | </a> <a href="#">Team | </a> <a href="#">Press | </a> <a href="#">FAQs | </a> <a href="#">Contact | </a> <a href="#">Terms </a>
+
+    </div>
+
+  </div>
+
+
+
+  <script src="./dist/aos.js"></script>
+  <script>
+    AOS.init({
+      easing: 'ease-in-out-sine'
+    });
+
+
+  </script>
+
+
+
+
+</body>
+
+
+
+
+</html>
