@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="./dist/aos.css" />
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+
+<script>
+$(document).ready(function(){
+  $('.fave-icon').click(function(){
+    $(this).toggleClass("fave-icon-active");
+ });
+
+ $('.login-tab').click(function(){
+   $('.login').fadeIn();
+   $('.reg').css("display", "none")
+ });
+
+ $('.reg-tab').click(function(){
+   $('.login').css("display", "none");
+   $('.reg').fadeIn();
+
+ });
+});
+
+
+</script>
+</head>
+
+<body>
+
+  <div class="container" style="background-image:url('images/login_bg-01.png');background-repeat:repeat;">
+
+    <!-- NAVBAR -->
+    <div class="navbar">
+
+      <div class="logo">
+        <!-- <img src="images/logo_1.png" alt="ProGetter-Logo" > -->
+
+      </div>
+      <div class="navbar-right">
+        <div class="desktop-menu">
+          <a href="#">ABOUT</a>
+          <a href="#" style="display:none;">JOIN</a>
+          <a href="#">BECOME A MENTOR</a>
+
+        </div>
+
+        <!-- TOGGLE/MOBILE NAVBAR -->
+        <div id="menuToggle">
+          <input type="checkbox">
+
+          <span></span>
+          <span></span>
+          <span></span>
+
+          <ul id="mobileMenu">
+            <a href="#"> <li>About</li> </a>
+            <a href="#"> <li>Become a Mentor</li> </a>
+
+          </ul>
+
+        </div>
+      </div>
+
+
+      <div class="form">
+        <input type="search" placeholder="Search">
+        <button type="submit"> <img src="images/search_icon.png" alt=""> </button>
+      </div>
+
+    </div>
+
+    <!-- LOGIN-REGISTRATION Styling -->
+
+<div class="login-reg-container">
+  <div class="reg-tab">
+    <p>REGISTER</p>
+  </div>
+
+  <div class="login-tab">
+    <p>LOGIN</p>
+  </div>
+
+  <div class="reg">
+    <div class="new-form">
+      <form id="submit-form" action="index.html" method="post">
+        <fieldset>
+          <input type="text" placeholder="FIRST NAME" name="" value="">
+          <input type="text" placeholder="LAST NAME" name="" value="">
+          <input type="email" placeholder="E-MAIL" name="" value="">
+          <input type="text" placeholder="USER NAME" name="" value="">
+          <label for="">BIRTH DATE:</label>
+          <input type="date" name="" value="">
+          <input type="password" name=""placeholder="PASSWORD" value="">
+          <input type="password" name=""placeholder="CONFIRM PASSWORD" value="">
+          <button type="submit" name="button">Create Account</button>
+
+        </fieldset>
+
+      </form>
+
+    </div>
+
+  </div>
+
+
+  <div class="login">
+    <div class="new-form">
+      <form id="submit-form" action="index.html" method="post">
+        <fieldset>
+          <input type="email" placeholder="E-MAIL"name="" value="">
+          <input type="text" placeholder="USERNAME" name="" value="">
+          <input type="password" placeholder="PASSWORD"name="" value="">
+          <button type="submit" name="button" style="background:#EE964B">Login</button>
+          <p style="color:white; text-align:center;">Forgot username?</p>
+          <p style="color:white; text-align:center;">Forgot password?</p>
+
+          <a href="#" style="color:white; text-align:center; text-decoration:underline">Click here!</a>
+
+
+        </fieldset>
+
+      </form>
+
+    </div>
+
+
+  </div>
+
+</div>
+
+
+    </div>
+
+    <!-- FOOTER -->
+
+    <div class="footer">
+      <img src="images/logo_2.png" alt="logo2">
+      <br>
+      <br>
+      <a href="#">About | </a> <a href="#">Team | </a> <a href="#">Press | </a> <a href="#">FAQs | </a> <a href="#">Contact | </a> <a href="#">Terms </a>
+
+    </div>
+
+  </div>
+
+
+
+  <script src="./dist/aos.js"></script>
+  <script>
+    AOS.init({
+      easing: 'ease-in-out-sine'
+    });
+
+
+  </script>
+
+
+
+
+</body>
+
+
+
+
+</html>

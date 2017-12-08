@@ -11,18 +11,64 @@
 
 
 
-<script>
-$(document).ready(function(){
-  $('.fave-icon').click(function(){
-    $(this).toggleClass("fave-icon-active");
- });
+  <script>
+    $(document).ready(function() {
+      $('.fave-icon').click(function() {
+        $(this).toggleClass("fave-icon-active");
+      });
+
+      $('.tab-1').click(function() {
+        $(".contact-info").slideToggle();
+        $('.tab-1').css("background-color", "#E56D13");
+        $(".tab-3").css("background-color", "#EE964B");
+        $(".tab-2").css("background-color", "#EE964B");
+        $(".tab-4").css("background-color", "#EE964B");
+
+        $(".experience-info").css("display", "none");
+        $(".education-info").css("display", "none");
+        $(".awards-info").css("display", "none");
+      });
+
+      $('.tab-2').click(function() {
+        $(".education-info").slideToggle();
+        $('.tab-2').css("background-color", "#E56D13");
+        $(".tab-1").css("background-color", "#EE964B");
+        $(".tab-3").css("background-color", "#EE964B");
+        $(".tab-4").css("background-color", "#EE964B");
+
+        $(".experience-info").css("display", "none");
+        $(".contact-info").css("display", "none");
+        $(".awards-info").css("display", "none");
+      });
+
+      $('.tab-3').click(function() {
+        $(".experience-info").slideToggle();
+        $('.tab-3').css("background-color", "#E56D13");
+        $(".tab-1").css("background-color", "#EE964B");
+        $(".tab-2").css("background-color", "#EE964B");
+        $(".tab-4").css("background-color", "#EE964B");
+
+        $(".contact-info").css("display", "none");
+        $(".education-info").css("display", "none");
+        $(".awards-info").css("display", "none");
+      });
+
+      $('.tab-4').click(function() {
+        $(".awards-info").slideToggle();
+        $('.tab-4').css("background-color", "#E56D13");
+        $(".tab-3").css("background-color", "#EE964B");
+        $(".tab-2").css("background-color", "#EE964B");
+        $(".tab-1").css("background-color", "#EE964B");
+
+        $(".experience-info").css("display", "none");
+        $(".education-info").css("display", "none");
+        $(".contact-info").css("display", "none");
+      });
 
 
 
-
-});
-
-</script>
+    });
+  </script>
 </head>
 
 <body>
@@ -52,8 +98,12 @@ $(document).ready(function(){
           <span></span>
 
           <ul id="mobileMenu">
-            <a href="#"> <li>About</li> </a>
-            <a href="#"> <li>Become a Mentor</li> </a>
+            <a href="#">
+              <li>About</li>
+            </a>
+            <a href="#">
+              <li>Become a Mentor</li>
+            </a>
 
           </ul>
 
@@ -73,83 +123,164 @@ $(document).ready(function(){
 
     <!-- SIGN UP TO BE A MENTOR -->
 
-      <div class="page-introduction">
-        <h1>SIGN UP TO BE A MENTOR</h1>
-        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euis-mod tincidunt ut laoreet dolore magna aliquam erat volutap. Ut wisi enim ad minim veniam, quis nostrud exerci.</p>
+    <div class="page-introduction">
+      <h1>SIGN UP TO BE A MENTOR</h1>
+      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euis-mod tincidunt ut laoreet dolore magna aliquam erat volutap. Ut wisi enim ad minim veniam, quis nostrud exerci.</p>
 
-
-      </div>
-
-
-
-      <div class="dashboard-4">
-
-        <button type="button" name="button" class="tab-1"> Contact Info</button>
-        <button type="button" name="button" class="tab-2">Education</button>
-        <button type="button" name="button" class="tab-3">Experiences & Skills</button>
-        <button type="button" name="button" class="tab-4">Awards & Certificates</button>
-
-
-      </div>
-  <div class="submit-container">
-
-
-    <div class="new-form">
-        <h1 style="color:#EE964B; text-align:center">Contact Information</h1>
-
-      <div class="image"></div>
-      <br>
-
-      <form id="submit-form" action="index.html" method="post">
-        <fieldset>
-          <label for="">UPLOAD PROFILE IMAGE:</label>
-          <input type="url" name="" value="" placeholder="No File Chosen">
-          <button type="submit" name="button">UPLOAD PHOTO</button>
-
-          <input type="text" name="" value="" placeholder="FIRST NAME">
-          <input type="text" name="" value="" placeholder="LAST NAME">
-        </fieldset>
-        <fieldset>
-          <label for="">ADDRESS:</label>
-          <input type="text" name="" value="" placeholder="STREET NUMBER AND NAME">
-          <input type="text" name="" value="" placeholder="CITY">
-          <select class="" name="">
-            <option value="">STATE</option>
-
-          </select>
-          <input type="text" name="" value=""placeholder="LINE 2 (optional)">
-          <input type="text" name="" value="" placeholder="ZIP CODE">
-        </fieldset>
-
-        <fieldset>
-          <label for="">JOB INFORMATION:</label>
-          <input type="text" name="" value="" placeholder="CURRENT JOB TITLE">
-          <input type="text" name="" value="" placeholder="COMPAY NAME">
-        </fieldset>
-
-        <fieldset>
-          <label for="">ONLINE PROFILES AND WEBSITES:</label>
-          <input type="text" name="" value="" placeholder="INSERT URL (optional)">
-          <input type="text" name="" value="" placeholder="INSERT URL (optional)">
-          <input type="text" name="" value="" placeholder="INSERT URL (optional)">
-          <input type="text" name="" value="" placeholder="TWITTER HANDLES (optional)">
-          <button type="submit" name="button">ADD NEW</button>
-        </fieldset>
-
-        <fieldset style="background-color:#19647E; padding:30px;">
-          <label for="" style="color:#ffffff">SITES:</label>
-          <input type="text" name="" value="" placeholder="Personal Website: URL">
-          <input type="text" name="" value="" placeholder="LinkedIn Profile: URL">
-          <input type="text" name="" value="" placeholder="GitHub Profile: URL">
-
-        </fieldset>
-
-        <button type="submit" name="button" style="background-color:#EE964B">SAVE AND CONTINUE</button>
-
-      </form>
 
     </div>
-  </div>
+
+
+
+    <div class="dashboard-4">
+
+      <button type="button" name="button" class="tab-1" style="background-color:#E56D13"> Contact Info</button>
+      <button type="button" name="button" class="tab-2">Education</button>
+      <button type="button" name="button" class="tab-3">Experiences & Skills</button>
+      <button type="button" name="button" class="tab-4">Awards & Certificates</button>
+
+
+    </div>
+    <div class="submit-container">
+
+      <div class="contact-info">
+        <div class="new-form">
+          <h1 style="color:#EE964B; text-align:center">Contact Information</h1>
+
+          <div class="image"></div>
+          <br>
+
+          <form id="submit-form" action="index.html" method="post">
+            <fieldset>
+              <label for="">UPLOAD PROFILE IMAGE:</label>
+              <input type="url" name="" value="" placeholder="No File Chosen">
+              <button type="submit" name="button">UPLOAD PHOTO</button>
+
+              <input type="text" name="" value="" placeholder="FIRST NAME">
+              <input type="text" name="" value="" placeholder="LAST NAME">
+            </fieldset>
+            <fieldset>
+              <label for="">ADDRESS:</label>
+              <input type="text" name="" value="" placeholder="STREET NUMBER AND NAME">
+              <input type="text" name="" value="" placeholder="CITY">
+              <select class="" name="">
+              <option value="">STATE</option>
+
+            </select>
+              <input type="text" name="" value="" placeholder="LINE 2 (optional)">
+              <input type="text" name="" value="" placeholder="ZIP CODE">
+            </fieldset>
+
+            <fieldset>
+              <label for="">JOB INFORMATION:</label>
+              <input type="text" name="" value="" placeholder="CURRENT JOB TITLE">
+              <input type="text" name="" value="" placeholder="COMPAY NAME">
+            </fieldset>
+
+            <fieldset>
+              <label for="">ONLINE PROFILES AND WEBSITES:</label>
+              <input type="text" name="" value="" placeholder="INSERT URL (optional)">
+              <input type="text" name="" value="" placeholder="INSERT URL (optional)">
+              <input type="text" name="" value="" placeholder="INSERT URL (optional)">
+              <input type="text" name="" value="" placeholder="TWITTER HANDLES (optional)">
+              <button type="submit" name="button">ADD NEW</button>
+            </fieldset>
+
+            <fieldset style="background-color:#19647E; padding:30px;">
+              <label for="" style="color:#ffffff">SITES:</label>
+              <input type="text" name="" value="" placeholder="Personal Website: URL">
+              <input type="text" name="" value="" placeholder="LinkedIn Profile: URL">
+              <input type="text" name="" value="" placeholder="GitHub Profile: URL">
+
+            </fieldset>
+
+            <button type="submit" name="button" style="background-color:#EE964B">SAVE AND CONTINUE</button>
+
+          </form>
+
+        </div>
+
+      </div>
+
+      <div class="experience-info">
+        <div class="new-form">
+          <h1 style="color:#EE964B; text-align:center">Experiences & Skills</h1>
+          <form id="submit-form" action="index.html" method="post">
+
+            <fieldset>
+              <label for="">SKILLS:</label>
+              <select class="" name="">
+            <option value="">Select from the list</option>
+
+          </select>
+              <input type="text" placeholder="Or add a new skill" name="" value="">
+              <button type="submit" name="button">ADD TO LIST</button>
+            </fieldset>
+            <fieldset style="background-color:#19647E; padding:30px;">
+              <label for="" style="color:#ffffff">SKILLS (add up to 10):</label>
+              <input type="text" name="" value="" placeholder="Skill 1">
+              <input type="text" name="" value="" placeholder="Skill 2">
+              <input type="text" name="" value="" placeholder="Skill 3">
+
+            </fieldset>
+
+            <fieldset>
+              <label for="">RESUME:</label>
+              <input type="url" name="" value="" placeholder="No File Chosen">
+              <button type="submit" name="button">UPLOAD FILE</button>
+            </fieldset>
+
+            <fieldset>
+              <label for="">PERSONAL STATEMENT:</label>
+              <textarea placeholder="Briefly tell us about yourself (2,000 words max)"></textarea>
+            </fieldset>
+
+            <fieldset>
+              <label for="">EMPLOYMENT DETAILS:</label>
+              <input type="text" placeholder="JOB TITLE" name="" value="">
+              <input type="text" placeholder="COMPANY NAME" name="" value="">
+              <input type="text" placeholder="INDUSTRY" name="" value="">
+              <label for="">DATE FROM:</label>
+              <input type="date" name="" value="" placeholder="DATE FROM:">
+              <label for="">DATE TO:</label>
+              <input type="date" placeholder="DATE TO" name="" value="">
+
+              <button type="submit" name="button">ADD TO LIST</button>
+            </fieldset>
+
+            <fieldset style="background-color:#19647E; padding:30px;">
+              <label for="" style="color:#ffffff">EMPLOYERS:</label>
+              <input type="text" name="" value="" placeholder="Date From -Date To: Job Title, Company Name">
+              <input type="text" name="" value="" placeholder="Date From -Date To: Job Title, Company Name">
+              <input type="text" name="" value="" placeholder="Date From -Date To: Job Title, Company Name">
+
+            </fieldset>
+
+            <button type="submit" name="button" style="background-color:#EE964B">SAVE AND CONTINUE</button>
+
+          </form>
+
+        </div>
+
+      </div>
+
+      <div class="education-info">
+        <div class="new-form">
+          <h1 style="color:#EE964B; text-align:center">Education</h1>
+        </div>
+
+      </div>
+
+      <div class="awards-info">
+        <div class="new-form">
+          <h1 style="color:#EE964B; text-align:center">Awards & Certificates</h1>
+        </div>
+
+      </div>
+
+
+
+    </div>
 
 
 
@@ -174,8 +305,6 @@ $(document).ready(function(){
     AOS.init({
       easing: 'ease-in-out-sine'
     });
-
-
   </script>
 
 

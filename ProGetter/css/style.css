@@ -380,71 +380,73 @@ body {
   .submit-container p, .page-introduction p {
     font-size: 15pt;
     color: #19647E; }
-  .submit-container .new-form, .page-introduction .new-form {
+
+.new-form {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 700px; }
+  .new-form .image {
     margin: 0 auto;
+    text-align: center;
+    width: 200px;
+    height: 200px;
+    background-color: #dee0e0;
+    border-radius: 100%; }
+
+#submit-form {
+  padding: 25px;
+  margin: 0 auto; }
+  #submit-form label {
+    font-weight: 900;
+    color: #19647E;
+    display: block; }
+  #submit-form fieldset {
+    border: none !important;
+    margin: 0 0 10px;
+    min-width: 100%;
+    padding: 0;
+    width: 100; }
+  #submit-form input[type="text"], #submit-form input[type="url"], #submit-form input[type="date"], #submit-form input[type="email"], #submit-form input[type="password"], #submit-form select {
     width: 100%;
-    max-width: 700px; }
-    .submit-container .new-form .image, .page-introduction .new-form .image {
-      margin: 0 auto;
-      text-align: center;
-      width: 200px;
-      height: 200px;
-      background-color: #dee0e0;
-      border-radius: 100%; }
-  .submit-container #submit-form, .page-introduction #submit-form {
-    padding: 25px;
-    margin: 0 auto; }
-    .submit-container #submit-form label, .page-introduction #submit-form label {
-      font-weight: 900;
-      color: #19647E;
-      display: block; }
-    .submit-container #submit-form fieldset, .page-introduction #submit-form fieldset {
-      border: none !important;
-      margin: 0 0 10px;
-      min-width: 100%;
-      padding: 0;
-      width: 100; }
-    .submit-container #submit-form input[type="text"], .page-introduction #submit-form input[type="text"], .submit-container #submit-form select, .submit-container .page-introduction #submit-form select, .page-introduction .submit-container #submit-form select, .page-introduction #submit-form select, .submit-container #submit-form input[type="url"], .page-introduction #submit-form input[type="url"] {
-      width: 100%;
-      border: none !important;
-      background: #e4f4f2;
-      margin: 0 0 5px;
-      padding: 10px;
-      font-size: 12pt;
-      color: #19647E;
-      height: 40px; }
-    .submit-container #submit-form textarea, .page-introduction #submit-form textarea {
-      width: 100%;
-      font-size: 12pt;
-      color: #19647E;
-      border: none !important;
-      margin: 0 0 5px;
-      padding: 10px;
-      background: #e4f4f2;
-      height: 150px; }
-    .submit-container #submit-form button[type="submit"], .page-introduction #submit-form button[type="submit"] {
-      cursor: pointer;
-      width: 100%;
-      border: none;
-      background: #28AFB0;
-      color: #FFF;
-      margin: 0 0 5px;
-      padding: 10px;
-      font-size: 15px;
-      font-weight: 900; }
-    .submit-container #submit-form button[type="submit"]:hover, .page-introduction #submit-form button[type="submit"]:hover {
-      background: #19647E;
-      -webkit-transition: background 0.3s ease-in-out;
-      -moz-transition: background 0.3s ease-in-out;
-      transition: background-color 0.3s ease-in-out; }
-    .submit-container #submit-form ::-webkit-input-placeholder, .page-introduction #submit-form ::-webkit-input-placeholder {
-      color: #19647E; }
-    .submit-container #submit-form :-moz-placeholder, .page-introduction #submit-form :-moz-placeholder {
-      color: #19647E; }
-    .submit-container #submit-form ::-moz-placeholder, .page-introduction #submit-form ::-moz-placeholder {
-      color: #19647E; }
-    .submit-container #submit-form :-ms-input-placeholder, .page-introduction #submit-form :-ms-input-placeholder {
-      color: #19647E; }
+    border: none !important;
+    background: #e4f4f2;
+    margin: 0 0 5px;
+    padding: 10px;
+    font-size: 12pt;
+    color: #19647E;
+    height: 40px; }
+  #submit-form textarea {
+    width: 100%;
+    font-size: 12pt;
+    color: #19647E;
+    border: none !important;
+    margin: 0 0 5px;
+    padding: 10px;
+    background: #e4f4f2;
+    height: 150px; }
+  #submit-form button[type="submit"] {
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    background: #28AFB0;
+    color: #FFF;
+    margin: 0 0 5px;
+    padding: 10px;
+    font-size: 15px;
+    font-weight: 900; }
+  #submit-form button[type="submit"]:hover {
+    background: #19647E;
+    -webkit-transition: background 0.3s ease-in-out;
+    -moz-transition: background 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out; }
+  #submit-form ::-webkit-input-placeholder {
+    color: #19647E; }
+  #submit-form :-moz-placeholder {
+    color: #19647E; }
+  #submit-form ::-moz-placeholder {
+    color: #19647E; }
+  #submit-form :-ms-input-placeholder {
+    color: #19647E; }
 
 .dashboard-4 {
   margin: 0 auto;
@@ -471,6 +473,15 @@ body {
 .tab-4 {
   grid-area: tab-4; }
 
+.experience-info {
+  display: none; }
+
+.education-info {
+  display: none; }
+
+.awards-info {
+  display: none; }
+
 .footer {
   background-color: #19647E;
   margin: auto;
@@ -483,6 +494,46 @@ body {
     color: white; }
   .footer a:hover {
     color: #28AFB0; }
+
+.login-reg-container {
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  padding: 200px 0; }
+
+.reg-tab {
+  font-weight: 900;
+  color: #19647E;
+  border-bottom: 30px solid #F9F9F9;
+  border-right: 30px solid transparent;
+  height: 0;
+  padding: 10px;
+  width: 120px;
+  display: inline-block; }
+  .reg-tab :hover {
+    cursor: pointer; }
+
+.login-tab {
+  font-weight: 900;
+  color: white;
+  border-bottom: 30px solid #28AFB0;
+  border-right: 30px solid transparent;
+  height: 0;
+  padding: 10px;
+  width: 120px;
+  display: inline-block; }
+  .login-tab :hover {
+    cursor: pointer; }
+
+.reg {
+  background: #F9F9F9;
+  padding: 25px; }
+
+.login {
+  background: #28AFB0;
+  padding: 25px;
+  display: none; }
 
 @media screen and (max-width: 900px) {
   .dashboard-5 {
@@ -531,6 +582,9 @@ body {
     overflow: hidden; }
 
   .submit-container #submit-form, .page-introduction #submit-form {
-    padding: 0; } }
+    padding: 0; }
+
+  .login-reg-container {
+    width: 90%; } }
 
 /*# sourceMappingURL=style.css.map */
