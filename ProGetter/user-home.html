@@ -17,30 +17,52 @@ $(document).ready(function(){
     $(this).toggleClass("fave-icon-active");
  });
 
- $('.favorites-tab').click(function(){
+ $('.tab-1').click(function() {
+   $(".featured-projects").slideToggle();
+   $('.tab-1').css("background-color", "#E56D13");
+   $(".tab-3").css("background-color", "#EE964B");
+   $(".tab-2").css("background-color", "#EE964B");
+   $(".tab-4").css("background-color", "#EE964B");
+
+   $(".favorite-projects").css("display", "none");
+   $(".my-projects").css("display", "none");
+   $(".my-groups").css("display", "none");
+ });
+
+ $('.tab-2').click(function() {
    $(".favorite-projects").slideToggle();
-   $('.favorites-tab').css("background-color","#E56D13");
-   $('.featured-tab').css("background-color","#EE964B");
-   $('.projects-tab').css("background-color","#EE964B");
-   $('.groups-tab').css("background-color","#EE964B");
+   $('.tab-2').css("background-color", "#E56D13");
+   $(".tab-1").css("background-color", "#EE964B");
+   $(".tab-3").css("background-color", "#EE964B");
+   $(".tab-4").css("background-color", "#EE964B");
 
-
+   $(".featured-projects").css("display", "none");
+   $(".my-projects").css("display", "none");
+   $(".my-groups").css("display", "none");
  });
 
- $('.projects-tab').click(function(){
+ $('.tab-3').click(function() {
    $(".my-projects").slideToggle();
-   $('.projects-tab').css("background-color","#E56D13");
-   $('.featured-tab').css("background-color","#EE964B");
-   $('.favorites-tab').css("background-color","#EE964B");
-   $('.groups-tab').css("background-color","#EE964B");
+   $('.tab-3').css("background-color", "#E56D13");
+   $(".tab-1").css("background-color", "#EE964B");
+   $(".tab-2").css("background-color", "#EE964B");
+   $(".tab-4").css("background-color", "#EE964B");
+
+   $(".featured-projects").css("display", "none");
+   $(".favorite-projects").css("display", "none");
+   $(".my-groups").css("display", "none");
  });
 
- $('.groups-tab').click(function(){
+ $('.tab-4').click(function() {
    $(".my-groups").slideToggle();
-   $('.groups-tab').css("background-color","#E56D13");
-   $('.featured-tab').css("background-color","#EE964B");
-   $('.favorites-tab').css("background-color","#EE964B");
-   $('.projects-tab').css("background-color","#EE964B");
+   $('.tab-4').css("background-color", "#E56D13");
+   $(".tab-3").css("background-color", "#EE964B");
+   $(".tab-2").css("background-color", "#EE964B");
+   $(".tab-1").css("background-color", "#EE964B");
+
+   $(".featured-projects").css("display", "none");
+   $(".favorite-projects").css("display", "none");
+   $(".my-projects").css("display", "none");
  });
 
 
@@ -109,11 +131,11 @@ $(document).ready(function(){
     <!-- DASHBOARD -->
     <div class="dashboard-5">
 
-      <button type="button" name="button" class="featured-tab" style="background-color:#E56D13;"> Featured Projects</button>
-      <button type="button" name="button" class="favorites-tab">Favorites</button>
-      <button type="button" name="button" class="projects-tab">My Projects</button>
-      <button type="button" name="button" class="groups-tab">My Groups</button>
-      <button type="button" name="button" class="appointments-tab" style="background-color:#28647E;">My Appointments</button>
+      <button type="button" name="button" class="tab-1" style="background-color:#E56D13;"> Featured Projects</button>
+      <button type="button" name="button" class="tab-2">Favorites</button>
+      <button type="button" name="button" class="tab-3">My Projects</button>
+      <button type="button" name="button" class="tab-4">My Groups</button>
+      <button type="button" name="button" class="tab-5" style="background-color:#28647E;">My Appointments</button>
 
       <div class="schedule-tab">
         <!-- Insert code that will populate appointmnets, including mentor name, title, date and time. Here, each is coded manually for esthetic purposes. -->

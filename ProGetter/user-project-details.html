@@ -18,6 +18,57 @@
         $(this).toggleClass("fave-icon-active");
       });
 
+      $('.tab-1').click(function() {
+        $(".my-submissions").slideToggle();
+        $('.tab-1').css("background-color", "#E56D13");
+        $(".tab-3").css("background-color", "#EE964B");
+        $(".tab-2").css("background-color", "#EE964B");
+        $(".tab-4").css("background-color", "#EE964B");
+
+        $(".my-feedback").css("display", "none");
+        $(".my-mentors").css("display", "none");
+        $(".my-discussions").css("display", "none");
+      });
+
+      $('.tab-2').click(function() {
+        $(".my-feedback").slideToggle();
+        $('.tab-2').css("background-color", "#E56D13");
+        $(".tab-1").css("background-color", "#EE964B");
+        $(".tab-3").css("background-color", "#EE964B");
+        $(".tab-4").css("background-color", "#EE964B");
+
+        $(".my-submissions").css("display", "none");
+        $(".my-mentors").css("display", "none");
+        $(".my-discussions").css("display", "none");
+      });
+
+      $('.tab-3').click(function() {
+        $(".my-mentors").slideToggle();
+        $('.tab-3').css("background-color", "#E56D13");
+        $(".tab-1").css("background-color", "#EE964B");
+        $(".tab-2").css("background-color", "#EE964B");
+        $(".tab-4").css("background-color", "#EE964B");
+
+        $(".my-submissions").css("display", "none");
+        $(".my-feedback").css("display", "none");
+        $(".my-discussions").css("display", "none");
+      });
+
+      $('.tab-4').click(function() {
+        $(".my-discussions").slideToggle();
+        $('.tab-4').css("background-color", "#E56D13");
+        $(".tab-3").css("background-color", "#EE964B");
+        $(".tab-2").css("background-color", "#EE964B");
+        $(".tab-1").css("background-color", "#EE964B");
+
+        $(".my-submissions").css("display", "none");
+        $(".my-feedback").css("display", "none");
+        $(".my-mentors").css("display", "none");
+
+    
+      });
+
+
     });
   </script>
 </head>
@@ -115,11 +166,11 @@
       <!-- DASHBOARD -->
       <div class="dashboard-5">
 
-        <button type="button" name="button" class="submissions-tab"> Submissions</button>
-        <button type="button" name="button" class="feedback-tab">Feedback</button>
-        <button type="button" name="button" class="mentors-tab">Mentors</button>
-        <button type="button" name="button" class="discussions-tab">Discussion</button>
-        <button type="button" name="button" class="related-tab" style="background-color:#28647E;">Related Projects</button>
+        <button type="button" name="button" class="tab-1"> Submissions</button>
+        <button type="button" name="button" class="tab-2">Feedback</button>
+        <button type="button" name="button" class="tab-3">Mentors</button>
+        <button type="button" name="button" class="tab-4">Discussion</button>
+        <button type="button" name="button" class="tab-5" style="background-color:#28647E;">Related Projects</button>
 
         <div class="projects-tab">
           <!-- Insert code that will populate appointmnets, including mentor name, title, date and time. Here, each is coded manually for esthetic purposes. -->
@@ -236,23 +287,25 @@ Lorem ipsum dolor sit amet, consecteuter adipsisclin elit, sed diam nonummy nibh
 
         </div>
 
-        <!-- FAVORITE PROJECTS -->
+        <!-- MY SUBMISSIONS -->
         <div class="my-submissions">
           <p>Insert code for my submissions</p>
 
         </div>
 
-        <!-- MY PROJECTS -->
+        <!-- MY FEEDBACK -->
         <div class="my-feedback">
           <p>Insert code for "my feedback"</p>
 
         </div>
 
-        <!-- MY GROUPS -->
+        <!-- MY MENTORS -->
         <div class="my-mentors">
           <p>Insert code for "my mentors" </p>
 
         </div>
+
+        <!-- MY DISCUSSIONS -->
 
         <div class="my-discussions">
           <p>Insert code for "my discussions" </p>

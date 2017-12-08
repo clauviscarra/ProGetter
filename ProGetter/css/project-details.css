@@ -273,26 +273,26 @@ body {
   grid-template-columns: 18% 18% 18% 18% 28%;
   grid-template-rows: auto;
   grid-gap: 1px;
-  grid-template-areas: "submissions feedback mentors-tab discussion related" "featuredprojects featuredprojects featuredprojects featuredprojects projects"; }
+  grid-template-areas: "tab-1 tab-2 tab-3 tab-4 tab-5" "featuredprojects featuredprojects featuredprojects featuredprojects projects"; }
   .dashboard-5 button {
     font-size: 15pt;
     font-weight: 400;
     padding: 20px 30px; }
 
-.submissions-tab {
-  grid-area: submissions; }
+.tab-1 {
+  grid-area: tab-1; }
 
-.feedback-tab {
-  grid-area: feedback; }
+.tab-2 {
+  grid-area: tab-2; }
 
-.mentors-tab {
-  grid-area: mentors-tab; }
+.tab-3 {
+  grid-area: tab-3; }
 
-.discussions-tab {
-  grid-area: discussion; }
+.tab-4 {
+  grid-area: tab-4; }
 
-.related-tab {
-  grid-area: related; }
+.tab-5 {
+  grid-area: tab-5; }
 
 .projects-tab {
   text-align: center;
@@ -308,6 +308,7 @@ body {
   grid-area: featuredprojects;
   grid-column-end: span 4;
   display: grid;
+  background: white;
   color: #19647E; }
   .project-instructions h1, .my-submissions h1, .my-feedback h1, .my-mentors h1, .my-discussions h1 {
     font-size: 30pt; }
@@ -330,7 +331,6 @@ body {
   width: 100%;
   border: 3px solid #5AAA95;
   margin: auto;
-  overflow: scroll;
   color: #3F3e3F;
   text-align: left; }
   .project .fave-icon, .project-details .featured-mentors .mentor .fave-icon {
@@ -381,7 +381,7 @@ body {
     width: 100%;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-areas: "submissions" "feedback" "mentors-tab" "discussion"   "featuredprojects" "related" "projects"; }
+    grid-template-areas: "tab-1" "tab-2" "tab-3" "tab-4"   "featuredprojects" "tab-5" "projects"; }
 
   .project-instructions, .my-submissions, .my-feedback, .my-mentors, .my-discussions {
     padding: 20px; }

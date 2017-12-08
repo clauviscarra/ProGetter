@@ -236,26 +236,21 @@ body {
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: auto;
   grid-gap: 1px;
-  grid-template-areas: "featured favorites projects groups appointments" "featuredprojects featuredprojects featuredprojects featuredprojects schedule"; }
+  grid-template-areas: "tab-1 tab-2 tab-3 tab-4 tab-5" "featuredprojects featuredprojects featuredprojects featuredprojects schedule"; }
   .dashboard-5 button {
     font-size: 15pt;
     font-weight: 400;
     padding: 20px 30px; }
-
-.featured-tab {
-  grid-area: featured; }
-
-.favorites-tab {
-  grid-area: favorites; }
-
-.projects-tab {
-  grid-area: projects; }
-
-.groups-tab {
-  grid-area: groups; }
-
-.appointments-tab {
-  grid-area: appointments; }
+  .dashboard-5 .tab-1 {
+    grid-area: tab-1; }
+  .dashboard-5 .tab-2 {
+    grid-area: tab-2; }
+  .dashboard-5 .tab-3 {
+    grid-area: tab-3; }
+  .dashboard-5 .tab-4 {
+    grid-area: tab-4; }
+  .dashboard-5 .tab-5 {
+    grid-area: tab-5; }
 
 .schedule-tab {
   background-color: #5AAA95;
@@ -299,7 +294,6 @@ body {
   width: 100%;
   border: 3px solid #5AAA95;
   margin: auto;
-  overflow: scroll;
   color: #3F3e3F;
   text-align: left; }
   .project .fave-icon, .mentor .fave-icon {
@@ -460,18 +454,14 @@ body {
     font-size: 15pt;
     font-weight: 400;
     padding: 20px 30px; }
-
-.tab-1 {
-  grid-area: tab-1; }
-
-.tab-2 {
-  grid-area: tab-2; }
-
-.tab-3 {
-  grid-area: tab-3; }
-
-.tab-4 {
-  grid-area: tab-4; }
+  .dashboard-4 .tab-1 {
+    grid-area: tab-1; }
+  .dashboard-4 .tab-2 {
+    grid-area: tab-2; }
+  .dashboard-4 .tab-3 {
+    grid-area: tab-3; }
+  .dashboard-4 .tab-4 {
+    grid-area: tab-4; }
 
 .experience-info {
   display: none; }
@@ -541,7 +531,7 @@ body {
     width: 100%;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-areas: "featured" "favorites" "projects" "groups" "featuredprojects" "appointments" "schedule"; }
+    grid-template-areas: "tab-1" "tab-2" "tab-3" "tab-4" "featuredprojects" "tab-5" "schedule"; }
 
   .dashboard-4 {
     grid-template-columns: 100%;
