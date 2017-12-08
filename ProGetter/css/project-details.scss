@@ -7,18 +7,27 @@ $torquoise: #28AFB0;
 $light-green: #5AAA95;
 $deep-gray: #3F3e3F;
 
-* {
-  a {
+*{
+
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+
+  a{
     text-decoration: none;
     color: inherit;
   }
 }
-
-html,body
-{
+body {
   margin: 0;
   width:100%;
   font-family: $font;
+
 }
 
 
@@ -82,7 +91,7 @@ html,body
 
 .navbar {
   z-index: 3;
-  margin: 0;
+  margin: 0 auto;
   padding: 20px 30px;
   font-family: $font;
   overflow: hidden;
@@ -122,16 +131,17 @@ html,body
 }
 
 .form {
-  width: 170px;
+  width: 200px;
   overflow: hidden;
-  height: 25px;
-  padding: 5px 10px;
+  height: 35px;
+  padding: 2px 5px;
   color: white;
   border: 1px solid white;
   border-radius: 5px;
   background-color: rgba(0, 0, 0, 0);
 
   input {
+    font-size: 12pt;
     color: white;
     vertical-align: middle;
     border: none;
@@ -150,11 +160,37 @@ html,body
       display: inline;
       vertical-align: middle;
     }
+    :hover{
+      cursor: pointer;
+    }
+  }
+
+  -webkit-touch-callout: none;
+  ::-webkit-input-placeholder {
+  color: white;
+  }
+
+  :-moz-placeholder {
+  color: white;
+  }
+
+  ::-moz-placeholder {
+  color: white;
+  }
+
+  :-ms-input-placeholder {
+  color: white;
   }
 }
 
 .logo {
   grid-area: headerleft;
+  background-image: url("../images/logo_1.png");
+  height: auto;
+  background-repeat: no-repeat;
+  background-size: auto;
+
+
 }
 
 .big-logo{
@@ -198,8 +234,12 @@ input
   opacity: 0; /* hide this */
   z-index: 2;
 
-  -webkit-touch-callout: none;
+
+
+
 }
+
+
 
 span
 {
@@ -281,6 +321,10 @@ li{
   .desktop-menu{
     display:none;
   }
+  .logo{
+    background-image: url("../images/PG-small-logo.png");
+
+  }
 
 
 }
@@ -296,7 +340,7 @@ li{
   grid-template-areas: "project-info mentor-info";
 
   .project-info {
-    padding: 100px 20px;
+    padding: 100px 40px;
     grid-area: project-info;
 
     h1 {
@@ -316,7 +360,7 @@ li{
 
   .featured-mentors {
     margin: 0 auto;
-    padding: 100px 50px;
+    padding: 100px 0px;
     width: 100%;
     background-image: url('../images/stripes-bg-01.png');
     background-size: cover;
@@ -409,12 +453,18 @@ li{
 
 //INSTRUCTIONS FOR PROJECTS
 .project-instructions {
-  width: 90%;
-  padding: 20px 20px 0;
+  width: 100%;
+  padding: 40px;
   grid-area: featuredprojects;
   grid-column-end: span 4;
   display: grid;
   color: $dark-green;
+  h1{
+    font-size:30pt;
+  }
+  p {
+    font-size: 15pt;
+  }
 
 }
 
@@ -492,7 +542,7 @@ li{
 // FEATURED MENTORS
 .three-columns {
   margin: auto;
-  width: 85%;
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(3,1fr);
   grid-gap: 100px;
@@ -505,7 +555,7 @@ li{
     width: 100%;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-areas: "submissions" "freedback" "mentors-tab" "discussion"  "related" "projects" "featuredprojects";
+    grid-template-areas: "submissions" "feedback" "mentors-tab" "discussion"  "related" "projects" "featuredprojects";
   }
 
 .project-instructions{

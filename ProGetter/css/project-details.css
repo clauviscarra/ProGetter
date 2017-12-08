@@ -1,9 +1,18 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway:400,900");
-* a {
-  text-decoration: none;
-  color: inherit; }
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility; }
+  * a {
+    text-decoration: none;
+    color: inherit; }
 
-html, body {
+body {
   margin: 0;
   width: 100%;
   font-family: "Raleway", sans-serif; }
@@ -56,7 +65,7 @@ html, body {
 
 .navbar {
   z-index: 3;
-  margin: 0;
+  margin: 0 auto;
   padding: 20px 30px;
   font-family: "Raleway", sans-serif;
   overflow: hidden;
@@ -89,15 +98,17 @@ html, body {
     color: #28AFB0; }
 
 .form {
-  width: 170px;
+  width: 200px;
   overflow: hidden;
-  height: 25px;
-  padding: 5px 10px;
+  height: 35px;
+  padding: 2px 5px;
   color: white;
   border: 1px solid white;
   border-radius: 5px;
-  background-color: rgba(0, 0, 0, 0); }
+  background-color: rgba(0, 0, 0, 0);
+  -webkit-touch-callout: none; }
   .form input {
+    font-size: 12pt;
     color: white;
     vertical-align: middle;
     border: none;
@@ -112,9 +123,23 @@ html, body {
       width: 20px;
       display: inline;
       vertical-align: middle; }
+    .form button :hover {
+      cursor: pointer; }
+  .form ::-webkit-input-placeholder {
+    color: white; }
+  .form :-moz-placeholder {
+    color: white; }
+  .form ::-moz-placeholder {
+    color: white; }
+  .form :-ms-input-placeholder {
+    color: white; }
 
 .logo {
-  grid-area: headerleft; }
+  grid-area: headerleft;
+  background-image: url("../images/logo_1.png");
+  height: auto;
+  background-repeat: no-repeat;
+  background-size: auto; }
 
 .big-logo img {
   width: 500px; }
@@ -143,8 +168,7 @@ html, body {
     cursor: pointer;
     opacity: 0;
     /* hide this */
-    z-index: 2;
-    -webkit-touch-callout: none; }
+    z-index: 2; }
   #menuToggle span {
     display: block;
     width: 33px;
@@ -193,7 +217,10 @@ html, body {
     display: none; }
 
   .desktop-menu {
-    display: none; } }
+    display: none; }
+
+  .logo {
+    background-image: url("../images/PG-small-logo.png"); } }
 .project-details {
   margin: 0;
   height: 100%;
@@ -203,7 +230,7 @@ html, body {
   grid-template-columns: 72% 28%;
   grid-template-areas: "project-info mentor-info"; }
   .project-details .project-info {
-    padding: 100px 20px;
+    padding: 100px 40px;
     grid-area: project-info; }
     .project-details .project-info h1 {
       font-size: 30pt;
@@ -215,7 +242,7 @@ html, body {
       color: #19647E; }
   .project-details .featured-mentors {
     margin: 0 auto;
-    padding: 100px 50px;
+    padding: 100px 0px;
     width: 100%;
     background-image: url("../images/stripes-bg-01.png");
     background-size: cover;
@@ -275,12 +302,16 @@ html, body {
     font-size: 15pt; }
 
 .project-instructions, .my-submissions, .my-feedback, .my-mentors, .my-discussions {
-  width: 90%;
-  padding: 20px 20px 0;
+  width: 100%;
+  padding: 40px;
   grid-area: featuredprojects;
   grid-column-end: span 4;
   display: grid;
   color: #19647E; }
+  .project-instructions h1, .my-submissions h1, .my-feedback h1, .my-mentors h1, .my-discussions h1 {
+    font-size: 30pt; }
+  .project-instructions p, .my-submissions p, .my-feedback p, .my-mentors p, .my-discussions p {
+    font-size: 15pt; }
 
 .my-submissions {
   display: none; }
@@ -338,7 +369,7 @@ html, body {
 
 .three-columns {
   margin: auto;
-  width: 85%;
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 100px; }
@@ -349,7 +380,7 @@ html, body {
     width: 100%;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-areas: "submissions" "freedback" "mentors-tab" "discussion"  "related" "projects" "featuredprojects"; }
+    grid-template-areas: "submissions" "feedback" "mentors-tab" "discussion"  "related" "projects" "featuredprojects"; }
 
   .project-instructions, .my-submissions, .my-feedback, .my-mentors, .my-discussions {
     padding: 20px; }

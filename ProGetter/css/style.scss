@@ -6,6 +6,7 @@ $dark-green: #19647E;
 $torquoise: #28AFB0;
 $light-green: #5AAA95;
 $deep-gray: #3F3e3F;
+$input-bg: #e4f4f2;
 
 
 *{
@@ -129,6 +130,7 @@ body {
   background-color: rgba(0, 0, 0, 0);
 
   input {
+    font-size: 12pt;
     color: white;
     vertical-align: middle;
     border: none;
@@ -147,6 +149,26 @@ body {
       display: inline;
       vertical-align: middle;
     }
+    :hover{
+      cursor: pointer;
+    }
+  }
+
+  -webkit-touch-callout: none;
+  ::-webkit-input-placeholder {
+  color: white;
+  }
+
+  :-moz-placeholder {
+  color: white;
+  }
+
+  ::-moz-placeholder {
+  color: white;
+  }
+
+  :-ms-input-placeholder {
+  color: white;
   }
 }
 
@@ -201,8 +223,12 @@ input
   opacity: 0; /* hide this */
   z-index: 2;
 
-  -webkit-touch-callout: none;
+
+
+
 }
+
+
 
 span
 {
@@ -514,6 +540,153 @@ li{
   margin:auto;
 }
 
+
+
+//SUBMIT A NEW PROJECT Styling
+
+.submit-container{
+margin: 0;
+height: 100%;
+padding: 100px 40px;
+width: 100%;
+font-family: $font;
+
+h1{
+  font-size: 30pt;
+  color: $dark-green;
+
+}
+
+h3 {
+  color: $torquoise;
+}
+
+p {
+  font-size: 15pt;
+  color: $dark-green;
+}
+
+
+.new-project-form{
+
+  margin: 0 auto;
+  width: 100%;
+  max-width: 700px;
+
+
+}
+
+#submit-form{
+
+  padding: 25px;
+  margin: 0 auto;
+
+
+  // box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+
+  label{
+    font-weight: 900;
+    color: $dark-green;
+    display: block;
+  }
+  fieldset{
+    border: none !important;
+    margin: 0 0 10px;
+    min-width: 100%;
+    padding: 0;
+    width: 100;
+  }
+
+  input[type="text"]{
+    width: 100%;
+    border: none !important;
+    background: $input-bg;
+    margin: 0 0 5px;
+    padding: 10px;
+    font-size: 12pt;
+    color: $dark-green;
+    height: 40px;
+  }
+
+  select{
+    @extend input[type="text"];
+
+  }
+
+  textarea {
+  width: 100%;
+  font-size: 12pt;
+  color: $dark-green;
+  border: none !important;
+  margin: 0 0 5px;
+  padding: 10px;
+  background: $input-bg;
+  height: 150px;
+  }
+
+
+  button[type="submit"] {
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  background: $torquoise;
+  color: #FFF;
+  margin: 0 0 5px;
+  padding: 10px;
+  font-size: 15px;
+  font-weight: 900;
+  }
+
+  button[type="submit"]:hover {
+  background: $dark-green;
+  -webkit-transition: background 0.3s ease-in-out;
+  -moz-transition: background 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+  }
+
+
+  ::-webkit-input-placeholder {
+  color: $dark-green;
+  }
+
+  :-moz-placeholder {
+  color: $dark-green;
+  }
+
+  ::-moz-placeholder {
+  color: $dark-green;
+  }
+
+  :-ms-input-placeholder {
+  color: $dark-green;
+  }
+
+}
+
+}
+
+
+
+
+
+//FOOTER Styling
+.footer{
+  background-color: $dark-green;
+  margin: auto;
+  text-align: center;
+  color: white;
+  padding: 30px;
+  a{
+    font-size: 15pt;
+    text-decoration: none;
+    color:white;
+  }
+  a:hover{
+    color: $torquoise;
+  }
+
+}
+
 @media screen and (max-width:900px) {
   .dashboard{
     margin: 0 auto;
@@ -567,28 +740,12 @@ li{
     overflow: hidden;
 
   }
-
-}
-
+.submit-container{
 
 
-
-
-
-//FOOTER Styling
-.footer{
-  background-color: $dark-green;
-  margin: auto;
-  text-align: center;
-  color: white;
-  padding: 30px;
-  a{
-    font-size: 15pt;
-    text-decoration: none;
-    color:white;
+  #submit-form{
+    padding:0;
   }
-  a:hover{
-    color: $torquoise;
   }
 
 }
