@@ -7,6 +7,7 @@ $torquoise: #28AFB0;
 $light-green: #5AAA95;
 $deep-gray: #3F3e3F;
 $input-bg: #e4f4f2;
+$light-gray: #dee0e0;
 
 
 *{
@@ -347,7 +348,7 @@ li{
 
 //DASHBOARD Styling
 
-.dashboard {
+.dashboard-5 {
   margin: 0 auto;
   width: 100%;
   display: grid;
@@ -565,14 +566,23 @@ p {
   font-size: 15pt;
   color: $dark-green;
 }
+}
 
+.new-form{
 
-.new-project-form{
 
   margin: 0 auto;
   width: 100%;
   max-width: 700px;
 
+  .image{
+    margin: 0 auto;
+    text-align: center;
+    width: 200px;
+    height: 200px;
+    background-color: $light-gray;
+    border-radius: 100%;
+  }
 
 }
 
@@ -597,7 +607,7 @@ p {
     width: 100;
   }
 
-  input[type="text"]{
+  input[type="text"], input[type="url"], input[type="date"], input[type="email"],input[type="password"], select{
     width: 100%;
     border: none !important;
     background: $input-bg;
@@ -608,10 +618,7 @@ p {
     height: 40px;
   }
 
-  select{
-    @extend input[type="text"];
 
-  }
 
   textarea {
   width: 100%;
@@ -663,7 +670,59 @@ p {
 
 }
 
+
+
+//SIGN UP TO BE A MENTOR styling
+
+.page-introduction{
+  @extend .submit-container;
 }
+.dashboard-4 {
+  margin: 0 auto;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 1px;
+  grid-template-areas: "tab-1 tab-2 tab-3 tab-4";
+
+  button {
+    @extend .orange-edge;
+    font-size: 15pt;
+    font-weight: 400;
+    padding: 20px 30px;
+
+  }
+}
+
+.tab-1 {
+  grid-area: tab-1;
+}
+
+.tab-2 {
+  grid-area: tab-2;
+}
+
+.tab-3 {
+  grid-area: tab-3;
+}
+
+.tab-4 {
+  grid-area: tab-4;
+}
+
+.experience-info{
+  display: none;
+}
+.education-info{
+  display: none;
+}
+
+.awards-info{
+  display: none;
+}
+
+
 
 
 
@@ -687,8 +746,58 @@ p {
 
 }
 
+//LOGIN-REGISTRATION Styling
+
+.login-reg-container{
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  padding: 200px 0;
+
+}
+.reg-tab{
+  font-weight: 900;
+  color: $dark-green;
+  border-bottom: 30px solid #F9F9F9;
+	border-right: 30px solid transparent;
+	height: 0;
+  padding: 10px;
+	width: 120px;
+  display: inline-block;
+
+  :hover{
+    cursor: pointer;
+  }
+}
+.login-tab{
+  font-weight: 900;
+  color: white;
+  border-bottom: 30px solid $torquoise;
+	border-right: 30px solid transparent;
+	height: 0;
+  padding: 10px;
+	width: 120px;
+  display: inline-block;
+  :hover{
+    cursor: pointer;
+  }
+}
+
+
+.reg{
+  background: #F9F9F9;
+  padding: 25px;
+}
+
+.login{
+  background: $torquoise;
+  padding: 25px;
+  display: none;
+}
+
 @media screen and (max-width:900px) {
-  .dashboard{
+  .dashboard-5{
     margin: 0 auto;
     width: 100%;
     display: grid;
@@ -702,6 +811,15 @@ p {
     "appointments"
     "schedule"
 
+  }
+
+  .dashboard-4{
+    grid-template-columns: 100%;
+    grid-template-areas:
+    "tab-1"
+    "tab-2"
+    "tab-3"
+    "tab-4"
   }
 
   .appointments-tab{
@@ -747,5 +865,7 @@ p {
     padding:0;
   }
   }
-
+  .login-reg-container{
+    width: 90%;
+  }
 }

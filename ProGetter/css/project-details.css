@@ -21,7 +21,7 @@ body {
   max-width: 1920px;
   margin: 0; }
 
-.orange-edge, .green-round, .dashboard button {
+.orange-edge, .green-round, .dashboard-5 button {
   background-color: #EE964B;
   color: white;
   font-weight: 900;
@@ -30,7 +30,7 @@ body {
   padding: 10px 30px;
   border: 0; }
 
-.orange-edge:hover, .green-round:hover, .dashboard button:hover {
+.orange-edge:hover, .green-round:hover, .dashboard-5 button:hover {
   background-color: #E56D13;
   cursor: pointer; }
 
@@ -42,9 +42,9 @@ body {
   background-color: #19647E; }
 
 .fa {
-  padding: 10px 15px;
+  padding: 10px;
   font-size: 30px;
-  width: 30px;
+  width: 50px;
   text-align: center;
   text-decoration: none;
   border: #EE964B 2px solid;
@@ -53,7 +53,8 @@ body {
 
 .fa:hover {
   color: white;
-  background: #E56D13; }
+  background: #E56D13;
+  border: #E56D13 2px solid; }
 
 .orange-title {
   display: inline-block;
@@ -265,7 +266,7 @@ body {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-areas: "project-info" "mentor-info"; } }
-.dashboard {
+.dashboard-5 {
   margin: 0 auto;
   width: 100%;
   display: grid;
@@ -273,7 +274,7 @@ body {
   grid-template-rows: auto;
   grid-gap: 1px;
   grid-template-areas: "submissions feedback mentors-tab discussion related" "featuredprojects featuredprojects featuredprojects featuredprojects projects"; }
-  .dashboard button {
+  .dashboard-5 button {
     font-size: 15pt;
     font-weight: 400;
     padding: 20px 30px; }
@@ -375,12 +376,12 @@ body {
   grid-gap: 100px; }
 
 @media screen and (max-width: 900px) {
-  .dashboard {
+  .dashboard-5 {
     margin: 0 auto;
     width: 100%;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-areas: "submissions" "feedback" "mentors-tab" "discussion"  "related" "projects" "featuredprojects"; }
+    grid-template-areas: "submissions" "feedback" "mentors-tab" "discussion"   "featuredprojects" "related" "projects"; }
 
   .project-instructions, .my-submissions, .my-feedback, .my-mentors, .my-discussions {
     padding: 20px; }

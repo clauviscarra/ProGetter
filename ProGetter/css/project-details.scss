@@ -64,9 +64,9 @@ body {
 }
 
 .fa {
-  padding: 10px 15px;
+  padding: 10px;
   font-size: 30px;
-  width: 30px;
+  width: 50px;
   text-align: center;
   text-decoration: none;
   border: $light-orange 2px solid;
@@ -76,6 +76,7 @@ body {
 .fa:hover {
     color: white;
     background: $dark-orange;
+    border: $dark-orange 2px solid;
 }
 
 //TITLES
@@ -400,7 +401,7 @@ li{
 
 
 //DASHBOARD Styling
-.dashboard {
+.dashboard-5 {
   margin: 0 auto;
   width: 100%;
   display: grid;
@@ -550,12 +551,12 @@ li{
 
 
 @media screen and (max-width:900px) {
-  .dashboard {
+  .dashboard-5 {
     margin: 0 auto;
     width: 100%;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-areas: "submissions" "feedback" "mentors-tab" "discussion"  "related" "projects" "featuredprojects";
+    grid-template-areas: "submissions" "feedback" "mentors-tab" "discussion"   "featuredprojects" "related" "projects";
   }
 
 .project-instructions{
