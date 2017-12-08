@@ -7,6 +7,7 @@ $torquoise: #28AFB0;
 $light-green: #5AAA95;
 $deep-gray: #3F3e3F;
 $input-bg: #e4f4f2;
+$light-gray: #dee0e0;
 
 
 *{
@@ -347,7 +348,7 @@ li{
 
 //DASHBOARD Styling
 
-.dashboard {
+.dashboard-5 {
   margin: 0 auto;
   width: 100%;
   display: grid;
@@ -567,12 +568,21 @@ p {
 }
 
 
-.new-project-form{
+.new-form{
+
 
   margin: 0 auto;
   width: 100%;
   max-width: 700px;
 
+  .image{
+    margin: 0 auto;
+    text-align: center;
+    width: 200px;
+    height: 200px;
+    background-color: $light-gray;
+    border-radius: 100%;
+  }
 
 }
 
@@ -597,7 +607,7 @@ p {
     width: 100;
   }
 
-  input[type="text"]{
+  input[type="text"], input[type="url"],{
     width: 100%;
     border: none !important;
     background: $input-bg;
@@ -665,6 +675,47 @@ p {
 
 }
 
+//SIGN UP TO BE A MENTOR styling
+
+.page-introduction{
+  @extend .submit-container;
+}
+.dashboard-4 {
+  margin: 0 auto;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 1px;
+  grid-template-areas: "tab-1 tab-2 tab-3 tab-4";
+
+  button {
+    @extend .orange-edge;
+    font-size: 15pt;
+    font-weight: 400;
+    padding: 20px 30px;
+
+  }
+}
+
+.tab-1 {
+  grid-area: tab-1;
+}
+
+.tab-2 {
+  grid-area: tab-2;
+}
+
+.tab-3 {
+  grid-area: tab-3;
+}
+
+.tab-4 {
+  grid-area: tab-4;
+}
+
+
+
 
 
 
@@ -688,7 +739,7 @@ p {
 }
 
 @media screen and (max-width:900px) {
-  .dashboard{
+  .dashboard-5{
     margin: 0 auto;
     width: 100%;
     display: grid;
@@ -702,6 +753,15 @@ p {
     "appointments"
     "schedule"
 
+  }
+
+  .dashboard-4{
+    grid-template-columns: 100%;
+    grid-template-areas:
+    "tab-1"
+    "tab-2"
+    "tab-3"
+    "tab-4"
   }
 
   .appointments-tab{

@@ -380,7 +380,7 @@ body {
     width: 100%;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-areas: "submissions" "feedback" "mentors-tab" "discussion"  "related" "projects" "featuredprojects"; }
+    grid-template-areas: "submissions" "feedback" "mentors-tab" "discussion"   "featuredprojects" "related" "projects"; }
 
   .project-instructions, .my-submissions, .my-feedback, .my-mentors, .my-discussions {
     padding: 20px; }

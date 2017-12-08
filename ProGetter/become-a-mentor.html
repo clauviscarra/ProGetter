@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>ProGetter - Submit A Project</title>
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="./dist/aos.css" />
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+
+<script>
+$(document).ready(function(){
+  $('.fave-icon').click(function(){
+    $(this).toggleClass("fave-icon-active");
+ });
+
+
+
+
+});
+
+</script>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- NAVBAR -->
+    <div class="navbar">
+
+      <div class="logo">
+
+      </div>
+      <div class="navbar-right">
+        <div class="desktop-menu">
+          <a href="#">ABOUT</a>
+          <a href="#" style="display:none;">JOIN</a>
+          <a href="#">BECOME A MENTOR</a>
+
+        </div>
+
+        <!-- TOGGLE/MOBILE NAVBAR -->
+        <div id="menuToggle">
+          <input type="checkbox">
+
+          <span></span>
+          <span></span>
+          <span></span>
+
+          <ul id="mobileMenu">
+            <a href="#"> <li>About</li> </a>
+            <a href="#"> <li>Become a Mentor</li> </a>
+
+          </ul>
+
+        </div>
+      </div>
+
+
+      <div class="form">
+
+        <input type="search" placeholder="Search">
+        <button type="submit"> <img src="images/search_icon.png" alt=""> </button>
+      </div>
+
+    </div>
+
+
+
+    <!-- SIGN UP TO BE A MENTOR -->
+
+      <div class="page-introduction">
+        <h1>SIGN UP TO BE A MENTOR</h1>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euis-mod tincidunt ut laoreet dolore magna aliquam erat volutap. Ut wisi enim ad minim veniam, quis nostrud exerci.</p>
+
+
+      </div>
+
+
+
+      <div class="dashboard-4">
+
+        <button type="button" name="button" class="tab-1"> Contact Info</button>
+        <button type="button" name="button" class="tab-2">Education</button>
+        <button type="button" name="button" class="tab-3">Experiences & Skills</button>
+        <button type="button" name="button" class="tab-4">Awards & Certificates</button>
+
+
+      </div>
+  <div class="submit-container">
+
+
+    <div class="new-form">
+        <h1 style="color:#EE964B; text-align:center">Contact Information</h1>
+
+      <div class="image"></div>
+      <br>
+
+      <form id="submit-form" action="index.html" method="post">
+        <fieldset>
+          <label for="">UPLOAD PROFILE IMAGE:</label>
+          <input type="url" name="" value="" placeholder="No File Chosen">
+          <button type="submit" name="button">UPLOAD PHOTO</button>
+
+          <input type="text" name="" value="" placeholder="FIRST NAME">
+          <input type="text" name="" value="" placeholder="LAST NAME">
+        </fieldset>
+        <fieldset>
+          <label for="">ADDRESS:</label>
+          <input type="text" name="" value="" placeholder="STREET NUMBER AND NAME">
+          <input type="text" name="" value="" placeholder="CITY">
+          <select class="" name="">
+            <option value="">STATE</option>
+
+          </select>
+          <input type="text" name="" value=""placeholder="LINE 2 (optional)">
+          <input type="text" name="" value="" placeholder="ZIP CODE">
+        </fieldset>
+
+        <fieldset>
+          <label for="">JOB INFORMATION:</label>
+          <input type="text" name="" value="" placeholder="CURRENT JOB TITLE">
+          <input type="text" name="" value="" placeholder="COMPAY NAME">
+        </fieldset>
+
+        <fieldset>
+          <label for="">ONLINE PROFILES AND WEBSITES:</label>
+          <input type="text" name="" value="" placeholder="INSERT URL (optional)">
+          <input type="text" name="" value="" placeholder="INSERT URL (optional)">
+          <input type="text" name="" value="" placeholder="INSERT URL (optional)">
+          <input type="text" name="" value="" placeholder="TWITTER HANDLES (optional)">
+          <button type="submit" name="button">ADD NEW</button>
+        </fieldset>
+
+        <fieldset style="background-color:#19647E; padding:30px;">
+          <label for="" style="color:#ffffff">SITES:</label>
+          <input type="text" name="" value="" placeholder="Personal Website: URL">
+          <input type="text" name="" value="" placeholder="LinkedIn Profile: URL">
+          <input type="text" name="" value="" placeholder="GitHub Profile: URL">
+
+        </fieldset>
+
+        <button type="submit" name="button" style="background-color:#EE964B">SAVE AND CONTINUE</button>
+
+      </form>
+
+    </div>
+  </div>
+
+
+
+
+
+    <!-- FOOTER -->
+
+    <div class="footer">
+      <img src="images/logo_2.png" alt="logo2">
+      <br>
+      <br>
+      <a href="#">About | </a> <a href="#">Team | </a> <a href="#">Press | </a> <a href="#">FAQs | </a> <a href="#">Contact | </a> <a href="#">Terms </a>
+
+    </div>
+
+  </div>
+
+
+
+  <script src="./dist/aos.js"></script>
+  <script>
+    AOS.init({
+      easing: 'ease-in-out-sine'
+    });
+
+
+  </script>
+
+
+
+
+</body>
+
+
+
+
+</html>
