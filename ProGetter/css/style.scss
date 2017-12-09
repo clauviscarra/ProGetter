@@ -768,26 +768,7 @@ p {
 
 
 
-//FOOTER Styling
-.footer{
-  background-color: $dark-green;
-  margin: auto;
-  text-align: center;
-  color: white;
-  padding: 30px;
-  a{
-    font-size: 15pt;
-    text-decoration: none;
-    color:white;
-  }
-  a:hover{
-    color: $torquoise;
-    -webkit-transition: background 0.3s ease-in-out;
-    -moz-transition: background 0.3s ease-in-out;
-    transition: background-color 0.3s ease-in-out;
-  }
 
-}
 
 //LOGIN-REGISTRATION Styling
 
@@ -911,4 +892,47 @@ p {
   .login-reg-container{
     width: 90%;
   }
+}
+
+//FOOTER Styling
+.footer{
+  background-color: $dark-green;
+  margin: auto;
+  text-align: center;
+  color: white;
+  padding: 30px;
+  a{
+    font-size: 15pt;
+    text-decoration: none;
+    color:white;
+  }
+  a:hover{
+    color: $torquoise;
+    -webkit-transition: background 0.3s ease-in-out;
+    -moz-transition: background 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  .fa{
+    padding: 10px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    border: none !important;
+    margin: 2px;
+
+    color: white;
+
+
+  }
+  .fa:hover{
+    color: $dark-green;
+    background: white;
+    -webkit-transition: background 0.3s ease-in-out;
+    -moz-transition: background 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out;
+
+  }
+
 }
