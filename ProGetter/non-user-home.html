@@ -17,6 +17,16 @@ $(document).ready(function(){
     $(this).toggleClass("fave-icon-active");
  });
 
+ $('#homeButton').click(function(){
+   $('#homeMenu').slideToggle();
+ });
+ $('#closeHomeMenu').click(function(){
+   $('#homeMenu').slideToggle();
+ });
+ $('#menuToggle').click(function(){
+   $('#mobileMenu').slideToggle();
+ })
+
 
 
 });
@@ -29,16 +39,17 @@ $(document).ready(function(){
   <div class="container">
 
     <!-- NAVBAR -->
-    <div class="navbar">
+    <div class="navbar" >
 
       <div class="logo">
+
 
       </div>
       <div class="navbar-right">
         <div class="desktop-menu">
-          <a href="#">ABOUT</a>
+          <a id="homeButton" href="#">HOME MENU</a>
           <a href="#">JOIN</a>
-          <a href="#">BECOME A MENTOR</a>
+          <a href="#">ABOUT</a>
 
         </div>
 
@@ -50,22 +61,43 @@ $(document).ready(function(){
           <span></span>
           <span></span>
 
-          <ul id="mobileMenu">
-            <a href="#"> <li>About</li> </a>
-            <a href="#"> <li>Become a Mentor</li> </a>
 
+        </div>
+
+        <div id="homeMenu">
+          <ul>
+            <li><a href="#">PROJECTS</a></li>
+            <li><a href="#">MENTORS</a></li>
+            <li><a href="#">DISCUSSION GROUPS</a></li>
+            <li><a href="#">POINTS</a></li>
+            <li><a href="#">MANAGE</a></li>
+            <li><a href="#">HOME</a></li>
+            <li style="font-weight:900;background:#EE964B;"id="closeHomeMenu"><a href="#">X</a></li>
           </ul>
+
 
         </div>
       </div>
 
 
       <div class="form">
-        <input type="search" placeholder="Search">
+        <form class="" action="index.html" method="post">
+
+
+        <input type="text" placeholder="Search">
         <button type="submit"> <img src="images/search_icon.png" alt=""> </button>
+        </form>
       </div>
 
     </div>
+
+    <div id="mobileMenu">
+      <button type="submit" name="button" style="border-top:2px solid white;"><a href="#">Home</a></button>
+      <button type="submit" name="button"><a href="#">About</a></button>
+
+    </div>
+
+
 
 
 

@@ -53,6 +53,9 @@ body {
 .orange-edge:hover {
   background-color: $dark-orange;
   cursor: pointer;
+  -webkit-transition: background 0.3s ease-in-out;
+  -moz-transition: background 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
 }
 
 
@@ -64,6 +67,9 @@ body {
 
 .green-round:hover{
   background-color: $dark-green;
+  -webkit-transition: background 0.3s ease-in-out;
+  -moz-transition: background 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
 }
 
 
@@ -96,7 +102,7 @@ body {
   background: linear-gradient(to top, rgba(25,100,126,0), rgba(25,100,126,1));
   /* Standard syntax (must be last) */
   display: grid;
-  grid-template-columns: 50% 2fr 1fr;
+  grid-template-columns: 40% 2fr 1fr;
   grid-template-rows: auto;
   grid-template-areas: "headerleft headerright search";
 
@@ -113,6 +119,9 @@ body {
 
   a:hover {
     font-weight: 900;
+    -webkit-transition: background 0.3s ease-in-out;
+    -moz-transition: background 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out;
   }
 
   a.active {
@@ -137,7 +146,7 @@ body {
     border: none;
     width: 75%;
     padding: 0;
-    background-color: Transparent;
+    background: Transparent !important;
   }
 
   button {
@@ -202,8 +211,9 @@ body {
 #menuToggle{
   display: none;
   position: relative;
+  float: right;
   top: 10px;
-  right: -90%;
+
 
   z-index: 1;
 
@@ -226,7 +236,6 @@ input
 
 
 
-
 }
 
 
@@ -244,64 +253,91 @@ span
 
   z-index: 1;
 
-  transform-origin: 4px 0px;
-
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              opacity 0.55s ease;
 }
-
-span:first-child
-{
-  transform-origin: 0% 0%;
-}
-
-span:nth-last-child(2)
-{
-  transform-origin: 0% 100%;
-}
-
-input:checked ~ span
-{
-  opacity: 1;
-  transform: rotate(45deg) translate(-2px, -1px);
-
-}
-
-input:checked ~ span:nth-last-child(3)
-{
-  opacity: 0;
-  transform: rotate(0deg) scale(0.2, 0.2);
-}
-input:checked ~ span:nth-last-child(2)
-{
-  transform: rotate(-45deg) translate(0, -1px);
-}
-input:checked ~ ul
-{
-  transform-origin: 0% 0%;
-  transform: translate(-100%, 0);
-}
-
 }
 
 #mobileMenu{
-  background-color: $dark-green;
-  transform: translate(80%, 0);
-  -webkit-font-smoothing: antialiased;
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
-  z-index: 2;
+display: none;
+margin: 0 auto;
+padding: 95px 0px 0px 0px;
+position: fixed;
+width: 100%;
+background-color: Transparent;
+z-index: 2;
 
-list-style-type: none;
-li{
-  padding: 10px 15px;
-  font-size: 22px;
-  background: $light-orange;
-  margin: auto;
+button {
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  background: $torquoise;
+  color: #FFF;
+  margin: 0 auto;
+  padding: 10px;
+  font-size: 15pt;
+  font-weight: 900;
+  border-bottom: 2px solid white;
 
 }
+
+  button:hover{
+    background: $dark-green;
+    -webkit-transition: background 0.3s ease-in-out;
+    -moz-transition: background 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out;
+  }
+
 }
+
+#homeMenu{
+  display: none;
+  margin: 0 auto;
+  position: fixed;
+
+  ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: $dark-green;
+  }
+  li {
+    float: left;
+
+  a{
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 15px;
+      text-decoration: none;
+    }
+    :hover{
+      background: $torquoise;
+      -webkit-transition: background 0.3s ease-in-out;
+      -moz-transition: background 0.3s ease-in-out;
+      transition: background-color 0.3s ease-in-out;
+    }
+}
+#closeHomeMenu{
+  a:hover{
+    background: $dark-orange;
+    -webkit-transition: background 0.3s ease-in-out;
+    -moz-transition: background 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out;
+  }
+}
+
+}
+
 @media screen and (max-width:1024px) {
+  .navbar{
+    height: 95px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: "headerleft headerright";
+    background:#28AFB0;
+  }
+
   #menuToggle{
     display: block;
   }
@@ -313,11 +349,14 @@ li{
   }
   .logo{
     background-image: url("../images/PG-small-logo.png");
+    background-size: auto;
 
   }
 
 
 }
+
+
 //MAIN Area Styling
 .main {
   margin: 0;
@@ -743,6 +782,9 @@ p {
   }
   a:hover{
     color: $torquoise;
+    -webkit-transition: background 0.3s ease-in-out;
+    -moz-transition: background 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out;
   }
 
 }
