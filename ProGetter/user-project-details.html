@@ -3,9 +3,10 @@
 
 <head>
   <meta charset="utf-8">
-  <title>ProGetter - Project Details</title>
+  <title>Project Details</title>
   <meta name="viewport" content="width=device-width">
   <link rel="stylesheet" href="./dist/aos.css" />
+  
   <link rel="stylesheet" type="text/css" href="css/project-details.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -18,6 +19,68 @@
         $(this).toggleClass("fave-icon-active");
       });
 
+      $('#menuToggle').click(function(){
+        $('#mobileMenu').slideToggle();
+      });
+
+      $('#homeButton').click(function(){
+        $('#homeMenu').slideToggle();
+      });
+      $('#closeHomeMenu').click(function(){
+        $('#homeMenu').slideToggle();
+      });
+
+      $('.tab-1').click(function() {
+        $(".my-submissions").slideToggle();
+        $('.tab-1').css("background-color", "#E56D13");
+        $(".tab-3").css("background-color", "#EE964B");
+        $(".tab-2").css("background-color", "#EE964B");
+        $(".tab-4").css("background-color", "#EE964B");
+
+        $(".my-feedback").css("display", "none");
+        $(".my-mentors").css("display", "none");
+        $(".my-discussions").css("display", "none");
+      });
+
+      $('.tab-2').click(function() {
+        $(".my-feedback").slideToggle();
+        $('.tab-2').css("background-color", "#E56D13");
+        $(".tab-1").css("background-color", "#EE964B");
+        $(".tab-3").css("background-color", "#EE964B");
+        $(".tab-4").css("background-color", "#EE964B");
+
+        $(".my-submissions").css("display", "none");
+        $(".my-mentors").css("display", "none");
+        $(".my-discussions").css("display", "none");
+      });
+
+      $('.tab-3').click(function() {
+        $(".my-mentors").slideToggle();
+        $('.tab-3').css("background-color", "#E56D13");
+        $(".tab-1").css("background-color", "#EE964B");
+        $(".tab-2").css("background-color", "#EE964B");
+        $(".tab-4").css("background-color", "#EE964B");
+
+        $(".my-submissions").css("display", "none");
+        $(".my-feedback").css("display", "none");
+        $(".my-discussions").css("display", "none");
+      });
+
+      $('.tab-4').click(function() {
+        $(".my-discussions").slideToggle();
+        $('.tab-4').css("background-color", "#E56D13");
+        $(".tab-3").css("background-color", "#EE964B");
+        $(".tab-2").css("background-color", "#EE964B");
+        $(".tab-1").css("background-color", "#EE964B");
+
+        $(".my-submissions").css("display", "none");
+        $(".my-feedback").css("display", "none");
+        $(".my-mentors").css("display", "none");
+
+
+      });
+
+
     });
   </script>
 </head>
@@ -27,15 +90,17 @@
   <div class="container">
 
     <!-- NAVBAR -->
-    <div class="navbar">
+    <div class="navbar" >
 
       <div class="logo">
+
 
       </div>
       <div class="navbar-right">
         <div class="desktop-menu">
-          <a href="#">ABOUT</a>
+          <a id="homeButton" href="#">HOME MENU</a>
           <a href="#" style="display:none;">JOIN</a>
+          <a href="#">ABOUT</a>
           <a href="#">BECOME A MENTOR</a>
 
         </div>
@@ -48,22 +113,43 @@
           <span></span>
           <span></span>
 
-          <ul id="mobileMenu">
-            <a href="#"> <li>About</li> </a>
-            <a href="#"> <li>Become a Mentor</li> </a>
 
+        </div>
+
+        <div id="homeMenu">
+          <ul>
+            <li><a href="#">PROJECTS</a></li>
+            <li><a href="#">MENTORS</a></li>
+            <li><a href="#">DISCUSSION GROUPS</a></li>
+            <li><a href="#">POINTS</a></li>
+            <li><a href="#">MANAGE</a></li>
+            <li><a href="#">HOME</a></li>
+            <li style="font-weight:900;background:#EE964B;"id="closeHomeMenu"><a href="#">X</a></li>
           </ul>
+
 
         </div>
       </div>
 
 
       <div class="form">
-        <input type="search" placeholder="Search">
+        <form class="" action="index.html" method="post">
+
+
+        <input type="text" placeholder="Search">
         <button type="submit"> <img src="images/search_icon.png" alt=""> </button>
+        </form>
       </div>
 
     </div>
+
+    <div id="mobileMenu">
+      <button type="submit" name="button" style="border-top:2px solid white;"><a href="#">Home</a></button>
+      <button type="submit" name="button"><a href="#">About</a></button>
+
+    </div>
+
+
 
     <!-- PROJECT DETAILS -->
 
@@ -115,11 +201,11 @@
       <!-- DASHBOARD -->
       <div class="dashboard-5">
 
-        <button type="button" name="button" class="submissions-tab"> Submissions</button>
-        <button type="button" name="button" class="feedback-tab">Feedback</button>
-        <button type="button" name="button" class="mentors-tab">Mentors</button>
-        <button type="button" name="button" class="discussions-tab">Discussion</button>
-        <button type="button" name="button" class="related-tab" style="background-color:#28647E;">Related Projects</button>
+        <button type="button" name="button" class="tab-1"> Submissions</button>
+        <button type="button" name="button" class="tab-2">Feedback</button>
+        <button type="button" name="button" class="tab-3">Mentors</button>
+        <button type="button" name="button" class="tab-4">Discussion</button>
+        <button type="button" name="button" class="tab-5" style="background-color:#28647E;">Related Projects</button>
 
         <div class="projects-tab">
           <!-- Insert code that will populate appointmnets, including mentor name, title, date and time. Here, each is coded manually for esthetic purposes. -->
@@ -236,23 +322,25 @@ Lorem ipsum dolor sit amet, consecteuter adipsisclin elit, sed diam nonummy nibh
 
         </div>
 
-        <!-- FAVORITE PROJECTS -->
+        <!-- MY SUBMISSIONS -->
         <div class="my-submissions">
           <p>Insert code for my submissions</p>
 
         </div>
 
-        <!-- MY PROJECTS -->
+        <!-- MY FEEDBACK -->
         <div class="my-feedback">
           <p>Insert code for "my feedback"</p>
 
         </div>
 
-        <!-- MY GROUPS -->
+        <!-- MY MENTORS -->
         <div class="my-mentors">
           <p>Insert code for "my mentors" </p>
 
         </div>
+
+        <!-- MY DISCUSSIONS -->
 
         <div class="my-discussions">
           <p>Insert code for "my discussions" </p>
@@ -275,7 +363,13 @@ Lorem ipsum dolor sit amet, consecteuter adipsisclin elit, sed diam nonummy nibh
         <br>
         <br>
         <a href="#">About | </a> <a href="#">Team | </a> <a href="#">Press | </a> <a href="#">FAQs | </a> <a href="#">Contact | </a> <a href="#">Terms </a>
+<br>
+<br>
+        <a href="#" class="fa fa-linkedin"></a>
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-twitter"></a>
 
+        <p>&#169; Copyright 2018 ProGetter</p>
       </div>
 
     </div>
