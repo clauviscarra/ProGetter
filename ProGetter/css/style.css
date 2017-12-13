@@ -429,20 +429,19 @@ body {
     background-color: #dee0e0;
     border-radius: 100%; }
 
-#submit-form {
+#submit-form, #approve-form {
   padding: 25px;
   margin: 0 auto; }
-  #submit-form label {
+  #submit-form label, #approve-form label {
     font-weight: 900;
     color: #19647E;
     display: block; }
-  #submit-form fieldset {
+  #submit-form fieldset, #approve-form fieldset {
     border: none !important;
     margin: 0 0 10px;
-    min-width: 100%;
     padding: 0;
-    width: 100; }
-  #submit-form input[type="text"], #submit-form input[type="url"], #submit-form input[type="date"], #submit-form input[type="email"], #submit-form input[type="password"], #submit-form select {
+    width: 100%; }
+  #submit-form input[type="text"], #approve-form input[type="text"], #submit-form input[type="url"], #approve-form input[type="url"], #submit-form input[type="date"], #approve-form input[type="date"], #submit-form input[type="email"], #approve-form input[type="email"], #submit-form input[type="password"], #approve-form input[type="password"], #submit-form select, #approve-form select {
     width: 100%;
     border: none !important;
     background: #e4f4f2;
@@ -451,7 +450,7 @@ body {
     font-size: 12pt;
     color: #19647E;
     height: 40px; }
-  #submit-form textarea {
+  #submit-form textarea, #approve-form textarea {
     width: 100%;
     font-size: 12pt;
     color: #19647E;
@@ -460,7 +459,7 @@ body {
     padding: 10px;
     background: #e4f4f2;
     height: 150px; }
-  #submit-form button[type="submit"] {
+  #submit-form button[type="submit"], #approve-form button[type="submit"] {
     cursor: pointer;
     width: 100%;
     border: none;
@@ -470,18 +469,18 @@ body {
     padding: 10px;
     font-size: 15px;
     font-weight: 900; }
-  #submit-form button[type="submit"]:hover {
+  #submit-form button[type="submit"]:hover, #approve-form button[type="submit"]:hover {
     background: #19647E;
     -webkit-transition: background 0.3s ease-in-out;
     -moz-transition: background 0.3s ease-in-out;
     transition: background-color 0.3s ease-in-out; }
-  #submit-form ::-webkit-input-placeholder {
+  #submit-form ::-webkit-input-placeholder, #approve-form ::-webkit-input-placeholder {
     color: #19647E; }
-  #submit-form :-moz-placeholder {
+  #submit-form :-moz-placeholder, #approve-form :-moz-placeholder {
     color: #19647E; }
-  #submit-form ::-moz-placeholder {
+  #submit-form ::-moz-placeholder, #approve-form ::-moz-placeholder {
     color: #19647E; }
-  #submit-form :-ms-input-placeholder {
+  #submit-form :-ms-input-placeholder, #approve-form :-ms-input-placeholder {
     color: #19647E; }
 
 .dashboard-4 {
@@ -554,6 +553,62 @@ body {
   padding: 25px;
   display: none; }
 
+#approve-form input[type="text"], #approve-form input[type="url"], #approve-form input[type="date"], #approve-form input[type="email"], #approve-form input[type="password"], #approve-form select {
+  width: 30%; }
+#approve-form button[type="submit"] {
+  width: 15%;
+  background: #EE964B; }
+#approve-form button[type="submit"]:hover {
+  background: #E56D13; }
+
+#reviews {
+  margin: 0 auto;
+  border-collapse: collapse;
+  width: 90%;
+  color: #19647E; }
+  #reviews td, #reviews th {
+    border: none !important;
+    padding: 8px; }
+  #reviews tr:nth-child(even) {
+    background-color: #e4f4f2; }
+  #reviews th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: white;
+    color: #19647E; }
+
+.footer {
+  background-color: #19647E;
+  margin: auto;
+  text-align: center;
+  color: white;
+  padding: 30px; }
+  .footer a {
+    font-size: 15pt;
+    text-decoration: none;
+    color: white; }
+  .footer a:hover {
+    color: #28AFB0;
+    -webkit-transition: background 0.3s ease-in-out;
+    -moz-transition: background 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out; }
+  .footer .fa {
+    padding: 10px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    border: none !important;
+    margin: 2px;
+    color: white; }
+  .footer .fa:hover {
+    color: #19647E;
+    background: white;
+    -webkit-transition: background 0.3s ease-in-out;
+    -moz-transition: background 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out; }
+
 @media screen and (max-width: 900px) {
   .dashboard-5 {
     margin: 0 auto;
@@ -600,40 +655,10 @@ body {
     grid-gap: 20px;
     overflow: hidden; }
 
-  .submit-container #submit-form, .page-introduction #submit-form {
+  .submit-container #submit-form, .page-introduction #submit-form, .submit-container #approve-form, .page-introduction #approve-form {
     padding: 0; }
 
   .login-reg-container {
     width: 90%; } }
-.footer {
-  background-color: #19647E;
-  margin: auto;
-  text-align: center;
-  color: white;
-  padding: 30px; }
-  .footer a {
-    font-size: 15pt;
-    text-decoration: none;
-    color: white; }
-  .footer a:hover {
-    color: #28AFB0;
-    -webkit-transition: background 0.3s ease-in-out;
-    -moz-transition: background 0.3s ease-in-out;
-    transition: background-color 0.3s ease-in-out; }
-  .footer .fa {
-    padding: 10px;
-    font-size: 30px;
-    width: 50px;
-    text-align: center;
-    text-decoration: none;
-    border: none !important;
-    margin: 2px;
-    color: white; }
-  .footer .fa:hover {
-    color: #19647E;
-    background: white;
-    -webkit-transition: background 0.3s ease-in-out;
-    -moz-transition: background 0.3s ease-in-out;
-    transition: background-color 0.3s ease-in-out; }
 
 /*# sourceMappingURL=style.css.map */

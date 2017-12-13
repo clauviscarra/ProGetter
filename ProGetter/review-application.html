@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Review Application</title>
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="./dist/aos.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+
+<script>
+$(document).ready(function(){
+  $('.fave-icon').click(function(){
+    $(this).toggleClass("fave-icon-active");
+ });
+
+ $('#homeButton').click(function(){
+   $('#homeMenu').slideToggle();
+ });
+ $('#closeHomeMenu').click(function(){
+   $('#homeMenu').slideToggle();
+ });
+
+ $('#menuToggle').click(function(){
+   $('#mobileMenu').slideToggle();
+ })
+
+
+
+
+});
+
+</script>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- NAVBAR -->
+    <div class="navbar" >
+
+      <div class="logo">
+
+
+      </div>
+      <div class="navbar-right">
+        <div class="desktop-menu">
+          <a id="homeButton" href="#">HOME MENU</a>
+          <a href="#" style="display:none;">JOIN</a>
+          <a href="#">ABOUT</a>
+          <a href="#">BECOME A MENTOR</a>
+
+        </div>
+
+        <!-- TOGGLE/MOBILE NAVBAR -->
+        <div id="menuToggle">
+          <input type="checkbox">
+
+          <span></span>
+          <span></span>
+          <span></span>
+
+
+        </div>
+
+        <div id="homeMenu">
+          <ul>
+            <li><a href="#">PROJECTS</a></li>
+            <li><a href="#">MENTORS</a></li>
+            <li><a href="#">DISCUSSION GROUPS</a></li>
+            <li><a href="#">POINTS</a></li>
+            <li><a href="#">MANAGE</a></li>
+            <li><a href="#">HOME</a></li>
+            <li style="font-weight:900;background:#EE964B;"id="closeHomeMenu"><a href="#">X</a></li>
+          </ul>
+
+
+        </div>
+      </div>
+
+
+      <div class="form">
+        <form class="" action="index.html" method="post">
+
+
+        <input type="text" placeholder="Search">
+        <button type="submit"> <img src="images/search_icon.png" alt=""> </button>
+        </form>
+      </div>
+
+    </div>
+
+    <div id="mobileMenu">
+      <button type="submit" name="button" style="border-top:2px solid white;"><a href="#">Home</a></button>
+      <button type="submit" name="button"><a href="#">About</a></button>
+
+    </div>
+
+
+
+
+    <!-- SUBMIT A NEW PROJECT -->
+    <div class="submit-container">
+      <div class="new-project-description">
+        <h1>REVIEW APPLICATIONS RECEIVED</h1>
+
+
+
+      </div>
+
+      <div id="approve-form">
+
+
+        <form  action="index.html" method="post">
+          <fieldset>
+            <select class="" name="">
+              <option value="">FILTER BY</option>
+
+            </select>
+            <button type="submit" name="button" style="margin-right:20px">Filter</button>
+
+
+            <select class="" name="">
+              <option value="">SELECT ACTION</option>
+
+            </select>
+            <button type="submit" name="button">Apply</button>
+          </fieldset>
+
+
+
+        </form>
+
+
+
+      </div>
+
+      <p style="text-alignt:center; margin:0;">All(15) &emsp;  Approved(6)  &emsp; Pending Review(5) &emsp;  Rejected(4)</p>
+
+
+      <table id="reviews">
+
+
+      <h2 style="color:#19647E">MENTOR APPLICATIONS:</h2>
+
+        <tr>
+          <th id="checkbox"> </th>
+          <th>FIRST NAME</th>
+          <th>LAST NAME</th>
+          <th>EMAIL</th>
+          <th>CITY</th>
+          <th>STATE</th>
+          <th>JOB TITLE</th>
+          <th>COMPANY</th>
+          <th>APPLICATION RESUME</th>
+          <th>DATE SUBMITTED</th>
+        </tr>
+
+        <tr>
+
+        <td>
+
+  <input type="checkbox">
+
+        </td>
+        <td>First Name</td>
+        <td>Last Name</td>
+        <td>E-Mail</td>
+        <td>City</td>
+        <td>State</td>
+        <td>Job Title</td>
+        <td>Company</td>
+        <td>Application Resume</td>
+        <td>Date Submitted</td>
+
+
+        </tr>
+
+        <tr>
+
+        <td>
+          <input type="checkbox">
+        </td>
+        <td>First Name</td>
+        <td>Last Name</td>
+        <td>E-Mail</td>
+        <td>City</td>
+        <td>State</td>
+        <td>Job Title</td>
+        <td>Company</td>
+        <td>Application Resume</td>
+        <td>Date Submitted</td>
+
+        </tr>
+
+      </table>
+      <br>
+      <a href="#" style="color:#19647E; text-decoration:underline; font-weight:900;">Show next 10</a>
+      <p>All(15) &emsp;  Approved(6)  &emsp; Pending Review(5) &emsp;  Rejected(4)</p>
+
+
+      <table id="reviews">
+
+
+      <h2 style="color:#19647E">PROJECT IDEA SUBMISSIONS:</h2>
+
+        <tr>
+          <th id="checkbox"> </th>
+          <th>PROJECT NAME</th>
+          <th>SUBMITTED BY</th>
+          <th>GRADE LEVEL</th>
+          <th>SUBJECT</th>
+          <th>SKILL LEVEL</th>
+          <th>JOB TYPE</th>
+          <th>TIMEFRAME</th>
+          <th>APPLICATION</th>
+          <th>DATE SUBMITTED</th>
+        </tr>
+
+        <tr>
+
+        <td>
+
+  <input type="checkbox">
+
+        </td>
+        <td>Project Name</td>
+        <td>Submitted by</td>
+        <td>Grade level</td>
+        <td>Subject</td>
+        <td>Skill Level</td>
+        <td>Job Type</td>
+        <td>Timeframe</td>
+        <td>Application</td>
+        <td>Date Submitted</td>
+
+
+        </tr>
+
+        <tr>
+
+        <td>
+          <input type="checkbox">
+        </td>
+        <td>Project Name</td>
+        <td>Submitted by</td>
+        <td>Grade level</td>
+        <td>Subject</td>
+        <td>Skill Level</td>
+        <td>Job Type</td>
+        <td>Timeframe</td>
+        <td>Application</td>
+        <td>Date Submitted</td>
+
+        </tr>
+
+      </table>
+      <br>
+      <a href="#" style="color:#19647E; text-decoration:underline; font-weight:900;">Show next 10</a>
+
+
+    </div>
+
+
+    <!-- FOOTER -->
+
+    <div class="footer">
+      <img src="images/logo_2.png" alt="logo2">
+      <br>
+      <br>
+      <a href="#">About | </a> <a href="#">Team | </a> <a href="#">Press | </a> <a href="#">FAQs | </a> <a href="#">Contact | </a> <a href="#">Terms </a>
+<br>
+<br>
+      <a href="#" class="fa fa-linkedin"></a>
+      <a href="#" class="fa fa-facebook"></a>
+      <a href="#" class="fa fa-twitter"></a>
+
+      <p>&#169; Copyright 2018 ProGetter</p>
+    </div>
+
+  </div>
+
+
+
+  <script src="./dist/aos.js"></script>
+  <script>
+    AOS.init({
+      easing: 'ease-in-out-sine'
+    });
+
+
+  </script>
+
+
+
+
+</body>
+
+
+
+
+</html>
